@@ -1,0 +1,10 @@
+[
+  {"id": "FB-101", "channel": "email", "text": "The new mobile app is fantastic. Payments are instant and the support team resolved my query within minutes. - Priya Sharma, priya.sharma@example.com"},
+  {"id": "FB-102", "channel": "chat", "text": "मेरा ऑर्डर तीन दिन देर से पहुंचा और पैकेजिंग फटी हुई थी। बहुत निराशाजनक अनुभव।"},
+  {"id": "FB-103", "channel": "survey", "text": "ಸಿಬ್ಬಂದಿ ತುಂಬಾ ಸ್ನೇಹಪರರಾಗಿದ್ದರು ಮತ್ತು ಸೇವೆ ವೇಗವಾಗಿತ್ತು. ಮತ್ತೆ ಬರುತ್ತೇನೆ!"},
+  {"id": "FB-104", "channel": "email", "text": "Le produit est de bonne qualité, mais la livraison a coûté beaucoup trop cher."},
+  {"id": "FB-105", "channel": "call", "text": "Called three times about a double charge on my card and nobody called back. Please call me on +91 98450 12345. Rahul Mehta, Bengaluru."},
+  {"id": "FB-106", "channel": "survey", "text": "El proceso de registro fue sencillo y la aplicación funciona sin problemas."},
+  {"id": "FB-107", "channel": "chat", "text": "Delivery was on time. The food was cold though, and the portion was smaller than the photos suggested."},
+  {"id": "FB-108", "channel": "email", "text": "注文した商品が間違っていました。返品の手続きも分かりにくいです。"}
+]

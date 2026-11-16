@@ -1,0 +1,19 @@
+# Exact versions the Day 1 labs were tested with (2026-11-15, Python 3.13, CPU).
+# Use only if a newer release breaks something:  pip install -r setup\requirements-tested.txt
+accelerate==1.15.0
+azure-ai-textanalytics==5.4.0
+azure-ai-vision-imageanalysis==1.0.0
+azure-core==1.41.0
+datasets==5.2.0
+huggingface_hub==2.4.0
+ipykernel==7.4.0
+ipywidgets==8.1.9
+numpy==2.5.4
+pandas==3.1.1
+python-dotenv==1.2.4
+requests==2.34.2
+scikit-learn==1.9.1
+tiktoken==0.14.0
+tokenizers==0.23.3
+torch==2.15.0
+transformers==5.23.0

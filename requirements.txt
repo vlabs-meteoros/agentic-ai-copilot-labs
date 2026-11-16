@@ -1,0 +1,27 @@
+# Agentic AI with Copilot - lab dependencies (Day 1)
+# Tested with Python 3.12/3.13 on 2026-11-15. Exact tested versions: setup/requirements-tested.txt
+#
+# On Windows, `pip install torch` from PyPI installs the CPU build.
+# For an NVIDIA GPU run setup-windows.ps1 with -Cuda.
+
+# --- Deep learning / Hugging Face (Labs 2 and 3)
+torch>=2.6
+transformers>=5.0,<6
+datasets>=4.0,<6
+accelerate>=1.1
+tokenizers>=0.21
+tiktoken>=0.9
+scikit-learn>=1.5
+pandas>=2.2
+numpy>=1.26
+
+# --- Azure AI services (Lab 1)
+azure-ai-textanalytics>=5.3,<6
+azure-ai-vision-imageanalysis>=1.0,<2
+azure-core>=1.30
+python-dotenv>=1.0
+requests>=2.31
+
+# --- Notebooks in VS Code
+ipykernel>=6.29
+ipywidgets>=8.1
