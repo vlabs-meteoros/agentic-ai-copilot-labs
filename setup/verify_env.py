@@ -1,8 +1,9 @@
 """
-Check that a lab machine is ready for the Day 1 labs.
+Check that a lab machine is ready for the labs.
 
-    python setup\\verify_env.py            # packages, hardware, network
-    python setup\\verify_env.py --azure    # + a live call to the shared Azure AI resource
+    python setup\\verify_env.py                    # packages, hardware, network
+    python setup\\verify_env.py --azure            # + live calls to the shared Azure AI resource (Lab 1, Labs 6-7)
+    python setup\\verify_env.py --neo4j            # + a live connection to your Neo4j AuraDB instance (Lab 7)
 
 Exit code 0 = ready, 1 = something needs fixing.
 """
@@ -43,7 +44,10 @@ def check_python():
 def check_packages():
     pkgs = ["torch", "transformers", "datasets", "accelerate", "tokenizers", "tiktoken",
             "sklearn", "pandas", "azure.ai.textanalytics", "azure.ai.vision.imageanalysis",
-            "dotenv", "requests", "ipykernel"]
+            "dotenv", "requests", "ipykernel",
+            # Day 2
+            "huggingface_hub", "sentence_transformers", "faiss", "openai", "langchain", "langchain_openai",
+            "langchain_community", "langchain_huggingface", "langgraph", "langchain_neo4j", "neo4j", "pinecone"]
     for name in pkgs:
         try:
             mod = importlib.import_module(name)
@@ -64,7 +68,7 @@ def check_hardware():
     try:
         import shutil
         free_gb = shutil.disk_usage(ROOT).free / 1e9
-        report(OK if free_gb > 5 else WARN, f"Free disk space: {free_gb:.1f} GB (need ~3 GB for models + datasets)")
+        report(OK if free_gb > 6 else WARN, f"Free disk space: {free_gb:.1f} GB (need ~4.5 GB for models + datasets)")
     except Exception:
         pass
 
@@ -75,6 +79,7 @@ def check_network():
         "Hugging Face Hub": "https://huggingface.co/api/models/distilbert/distilbert-base-uncased",
         "tiktoken files": "https://openaipublic.blob.core.windows.net/encodings/cl100k_base.tiktoken",
         "Azure Translator": "https://api.cognitive.microsofttranslator.com/languages?api-version=3.0&scope=translation",
+        "Neo4j Aura console": "https://console.neo4j.io",
     }
     for name, url in targets.items():
         try:
@@ -126,21 +131,55 @@ def check_env_file(live):
             print("      ", r.text[:300])
     except Exception as e:
         report(FAIL, f"Azure Translator call failed: {e}")
+    deployment = (vals.get("AZURE_OPENAI_DEPLOYMENT") or "gpt-4.1-mini").strip()
+    try:
+        r = requests.post(f"{endpoint}/openai/v1/chat/completions",
+                          headers={"api-key": key},
+                          json={"model": deployment, "max_tokens": 5,
+                                "messages": [{"role": "user", "content": "Reply with: ok"}]},
+                          timeout=30)
+        report(OK if r.ok else FAIL, f"Azure OpenAI chat call ({deployment}): HTTP {r.status_code}"
+               + (f" -> {r.json()['choices'][0]['message']['content']!r}" if r.ok else ""))
+        if not r.ok:
+            print("      ", r.text[:300])
+    except Exception as e:
+        report(FAIL, f"Azure OpenAI call failed: {e}")
+
+
+def check_neo4j():
+    from dotenv import dotenv_values
+    vals = dotenv_values(ROOT / ".env") if (ROOT / ".env").exists() else {}
+    uri, user, pw = vals.get("NEO4J_URI") or "", vals.get("NEO4J_USERNAME") or "neo4j", vals.get("NEO4J_PASSWORD") or ""
+    if not uri or "<" in uri or not pw or "<" in pw:
+        report(WARN, "NEO4J_URI / NEO4J_PASSWORD not set in .env (Lab 7, Task 1)")
+        return
+    try:
+        from neo4j import GraphDatabase
+        with GraphDatabase.driver(uri, auth=(user, pw)) as driver:
+            driver.verify_connectivity()
+            info = driver.get_server_info()
+            report(OK, f"Neo4j connection: OK ({info.agent} at {info.address})")
+    except Exception as e:
+        report(FAIL, f"Neo4j connection failed: {type(e).__name__}: {str(e)[:200]}")
+        print("       Is the instance Running (not paused) in console.neo4j.io? Are URI/user/password copied exactly?")
 
 
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--azure", action="store_true", help="also make live calls to the Azure resource")
+    p.add_argument("--neo4j", action="store_true", help="also connect to the Neo4j instance in .env")
     args = p.parse_args()
 
     print("=" * 64)
-    print(" Agentic AI with Copilot - Day 1 environment check")
+    print(" Agentic AI with Copilot - lab environment check")
     print("=" * 64)
     check_python()
     check_packages()
     check_hardware()
     check_network()
     check_env_file(args.azure)
+    if args.neo4j:
+        check_neo4j()
     print("=" * 64)
     if failures:
         print(f" {failures} problem(s) found - fix the [FAIL] lines above.")
