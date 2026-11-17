@@ -1,5 +1,5 @@
-# Agentic AI with Copilot - lab dependencies (Day 1)
-# Tested with Python 3.12/3.13 on 2026-11-15. Exact tested versions: setup/requirements-tested.txt
+# Agentic AI with Copilot - lab dependencies (Days 1-2)
+# Day 1 tested with Python 3.12/3.13 on 2026-11-15; Day 2 on 2026-11-16. Exact tested versions: setup/requirements-tested.txt
 #
 # On Windows, `pip install torch` from PyPI installs the CPU build.
 # For an NVIDIA GPU run setup-windows.ps1 with -Cuda.
@@ -21,6 +21,23 @@ azure-ai-vision-imageanalysis>=1.0,<2
 azure-core>=1.30
 python-dotenv>=1.0
 requests>=2.31
+
+# --- Day 2: Hugging Face Hub CLI, embeddings and vector stores (Labs 4-5)
+huggingface_hub>=1.31,<2      # provides the `hf` command; <2 because langchain-huggingface requires it
+sentence-transformers>=5.0
+faiss-cpu>=1.9
+pinecone>=7.0                 # optional Lab 5 Part 7
+
+# --- Day 2: LLM APIs, LangChain, LangGraph, Neo4j (Labs 5-7)
+openai>=2.0
+langchain>=1.0,<2
+langchain-core>=1.0,<2
+langchain-openai>=1.0,<2
+langchain-community>=0.4
+langchain-huggingface>=1.0,<2
+langgraph>=1.0,<2
+langchain-neo4j>=0.6
+neo4j>=5.28
 
 # --- Notebooks in VS Code
 ipykernel>=6.29
