@@ -1,10 +1,10 @@
 """
-Download every model, tokenizer, dataset and tiktoken file the Day 1 labs use,
+Download every model, tokenizer, dataset and tiktoken file the labs use,
 so the labs run without waiting on downloads (or offline).
 
     python setup\\prefetch_assets.py
 
-Total download: roughly 1 GB. Files go to the normal Hugging Face cache
+Total download: roughly 2.5 GB (Day 1 ~1 GB, Day 2 ~1.4 GB). Files go to the normal Hugging Face cache
 (%USERPROFILE%\\.cache\\huggingface) unless HF_HOME is set.
 """
 import os
@@ -22,6 +22,12 @@ TOKENIZERS = ["google-bert/bert-base-uncased", "openai-community/gpt2",
               "FacebookAI/xlm-roberta-base"]                         # Lab 3 (tokenizer files only)
 DATASETS = ["stanfordnlp/sst2", "stanfordnlp/imdb"]                 # Lab 2, Lab 3
 TIKTOKEN = ["cl100k_base", "o200k_base"]                            # Lab 3
+
+# Day 2
+PIPELINES = [("text-classification", "distilbert/distilbert-base-uncased-finetuned-sst-2-english"),   # Lab 5
+             ("zero-shot-classification", "MoritzLaurer/deberta-v3-xsmall-zeroshot-v1.1-all-33"),     # Lab 5
+             ("text-generation", "Qwen/Qwen2.5-0.5B-Instruct")]                                      # Lab 5
+EMBEDDERS = ["sentence-transformers/all-MiniLM-L6-v2"]                                               # Labs 5, 6
 
 
 def step(label, fn):
@@ -56,6 +62,14 @@ def main():
     print("tiktoken encodings:")
     for e in TIKTOKEN:
         ok &= step(e, lambda e=e: tiktoken.get_encoding(e).encode("warm-up"))
+
+    print("Day 2 models:")
+    from transformers import pipeline
+    from sentence_transformers import SentenceTransformer
+    for task, m in PIPELINES:
+        ok &= step(m, lambda task=task, m=m: pipeline(task, model=m))
+    for m in EMBEDDERS:
+        ok &= step(m, lambda m=m: SentenceTransformer(m).encode(["warm-up"]))
 
     print("\nAll assets cached." if ok else "\nSome downloads failed - check network/proxy and re-run.")
     sys.exit(0 if ok else 1)
