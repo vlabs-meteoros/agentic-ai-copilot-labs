@@ -1,6 +1,7 @@
 <#
 .SYNOPSIS
-  One-time setup of the Day 1 lab environment on a Windows lab VM.
+  Setup of the lab environment on a Windows lab VM. Run it once on Day 1, and again
+  at the start of each new day (after `git pull`) to install that day's new packages.
 
 .DESCRIPTION
   1. Finds Python 3.10+ (installs Python 3.12 for the current user if missing;
@@ -9,7 +10,7 @@
   3. Installs the lab packages (CPU PyTorch by default)
   4. Installs the VS Code Python + Jupyter extensions
   5. Registers a Jupyter kernel called "Python (agentic-ai-labs)"
-  6. Creates .env from .env.example
+  6. Creates .env from .env.example, or adds any new settings to an existing .env
   7. Optionally pre-downloads models and datasets (-Prefetch)
   8. Runs the environment check
 
@@ -18,7 +19,7 @@
   powershell -ExecutionPolicy Bypass -File .\setup\setup-windows.ps1 -Prefetch
 
 .PARAMETER Prefetch
-  Download all models/datasets now (~1 GB) so the labs never wait on downloads.
+  Download all models/datasets now (~2.5 GB) so the labs never wait on downloads.
 
 .PARAMETER Cuda
   Install the CUDA build of PyTorch (only for VMs with an NVIDIA GPU).
@@ -148,7 +149,25 @@ Write-Ok "Kernel 'Python (agentic-ai-labs)' registered"
 # --------------------------------------------------------------- 6. .env
 Write-Step "Preparing .env"
 if (Test-Path ".env") {
-    Write-Ok ".env already exists - left unchanged"
+    # Keep every existing value; append only settings that are new in .env.example (e.g. Day 2 keys)
+    $existing = @{}
+    foreach ($line in Get-Content ".env") {
+        if ($line -match '^\s*#?\s*([A-Z0-9_]+)\s*=') { $existing[$Matches[1]] = $true }
+    }
+    $added = @()
+    foreach ($line in Get-Content ".env.example") {
+        if ($line -match '^\s*#?\s*([A-Z0-9_]+)\s*=' -and -not $existing.ContainsKey($Matches[1])) {
+            $added += $line
+            $existing[$Matches[1]] = $true
+        }
+    }
+    if ($added.Count -gt 0) {
+        Add-Content ".env" ("`n# Added by setup-windows.ps1 on " + (Get-Date -Format "yyyy-MM-dd"))
+        Add-Content ".env" $added
+        Write-Ok (".env kept; added new settings: " + (($added | ForEach-Object { ($_ -split '=')[0].Trim('# ') }) -join ", "))
+    } else {
+        Write-Ok ".env already exists and is up to date - left unchanged"
+    }
 } else {
     Copy-Item ".env.example" ".env"
     Write-Ok ".env created - add the Azure values from your trainer before Lab 1"
@@ -156,7 +175,7 @@ if (Test-Path ".env") {
 
 # ----------------------------------------------------------- 7. prefetch
 if ($Prefetch) {
-    Write-Step "Pre-downloading models and datasets (~1 GB)"
+    Write-Step "Pre-downloading models and datasets (~2.5 GB)"
     & $venvPy setup\prefetch_assets.py
 }
 
