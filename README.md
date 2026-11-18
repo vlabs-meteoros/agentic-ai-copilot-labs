@@ -69,6 +69,6 @@ agentic-ai-copilot-labs/
     ├── data/                   <- Kaveri Systems helpdesk knowledge base (Labs 5-6)
     ├── lab04-hf-hub-cli/       <- Available
     ├── lab05-llm-usage/        <- Available
-    ├── lab06-prompt-variations/ <- Will be uploaded after completion of lab05
+    ├── lab06-prompt-variations/ <- Available
     └── lab07-graph-memory-agent/ <- Will be uploaded after comletion of lab06
 ```

@@ -23,7 +23,7 @@ The script reuses your `.venv`, installs the Day 2 packages, adds the new Day 2 
 |---|---|---|---|---|---|
 | 4 | [Hugging Face Hub and CLI](lab04-hf-hub-cli/README.md) | Tools and Ecosystems for LLM Agents | 30 min | Hugging Face account | Available |
 | 5 | [Getting Started with LLM Usage](lab05-llm-usage/README.md) | HF Transformers | 40 min | Prefetched models (or internet). Optional: Pinecone account | Available |
-| 6 | Prompt Variations and Grounding | Generative AI Fundamentals | 30 min | Azure values from Lab 1 | Coming Soon (will be added after Lab 5) |
+| 6 | [Prompt Variations and Grounding](lab06-prompt-variations) | Generative AI Fundamentals | 30 min | Azure values from Lab 1 | Available |
 | 7 | Graph Memory Agent | Tools and Ecosystems for LLM Agents (LangChain, LangGraph, Neo4j) | 45 min | Azure values + AuraDB Free instance | Coming Soon (will be added after Lab 6) |
 
 ## How the labs connect
