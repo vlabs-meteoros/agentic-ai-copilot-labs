@@ -13,7 +13,7 @@ powershell -ExecutionPolicy Bypass -File .\setup\setup-windows.ps1
 
 Day 3 adds only one small package (`mcp`), so there's no `-Prefetch` today. The script takes 2-3 minutes and keeps your `.venv` and `.env`.
 
-*While it runs, do *[Lab 7, Task 1](lab07-copilot-in-vscode/README.md#task-1-sign-in-to-github-copilot-5-min)**: sign in to GitHub Copilot with
+**While it runs, do *[Lab 7, Task 1](lab07-copilot-in-vscode/README.md#task-1-sign-in-to-github-copilot-5-min)**: sign in to GitHub Copilot with
 the GitHub account that has your *Copilot Business* seat. Your trainer tells you which account to use.
 
 ## Labs
