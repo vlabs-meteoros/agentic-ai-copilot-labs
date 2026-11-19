@@ -47,7 +47,9 @@ def check_packages():
             "dotenv", "requests", "ipykernel",
             # Day 2
             "huggingface_hub", "sentence_transformers", "faiss", "openai", "langchain", "langchain_openai",
-            "langchain_community", "langchain_huggingface", "langgraph", "langchain_neo4j", "neo4j", "pinecone"]
+            "langchain_community", "langchain_huggingface", "langgraph", "langchain_neo4j", "neo4j", "pinecone",
+            # Day 3
+            "mcp"]
     for name in pkgs:
         try:
             mod = importlib.import_module(name)
