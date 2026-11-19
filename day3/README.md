@@ -13,14 +13,11 @@ powershell -ExecutionPolicy Bypass -File .\setup\setup-windows.ps1
 
 Day 3 adds only one small package (`mcp`), so there's no `-Prefetch` today. The script takes 2-3 minutes and keeps your `.venv` and `.env`.
 
-**While it runs**, do **[Lab 7, Task 1](lab07-copilot-in-vscode/README.md#task-1-sign-in-to-github-copilot-5-min)**: sign in to GitHub Copilot with
-the GitHub account that has your **Copilot Business** seat. Your trainer tells you which account to use.
-
 ## Labs
 
 | # | Lab | Topic it supports | Time | Needs | Availability |
 |---|---|---|---|---|---|
-| 7 | [Enable and Explore GitHub Copilot in VS Code](lab07-copilot-in-vscode/README.md) | Prompting Fundamentals | 35 min | Copilot Business seat | Will be uploaded once the theory is completed. |
+| 7 | Enable and Explore GitHub Copilot in VS Code | Prompting Fundamentals | 35 min | Copilot Business seat | Will be uploaded once the theory is completed. |
 | 8 | From a Weak Prompt to a Structured Prompt | Prompting Fundamentals, Prompting Patterns and Language Practices | 45 min | Lab 7 | Will be uploaded once the relevant theory (if any) and Lab 7 are completed. |
 | 9 | Build Your Own MCP Server in Python | MCP | 50 min | Lab 7 + Day 3 setup | Will be uploaded once its theory and Lab 8 are completed. |
 
