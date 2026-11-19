@@ -20,8 +20,8 @@ While it runs, complete **[Lab 7, Task 1](lab07-copilot-in-vscode/README.md#task
 | # | Lab | Topic it supports | Time | Needs | Availability |
 |---|---|---|---|---|---|
 | 7 | [Enable and Explore GitHub Copilot in VS Code](lab07-copilot-in-vscode/README.md)| Prompting Fundamentals | 35 min | Copilot Business seat | Available |
-| 8 | [From a Weak Prompt to a Structured Prompt](lab08-prompting-patterns/README.md) | Prompting Fundamentals, Prompting Patterns and Language Practices | 45 min | Lab 7 | Will be uploaded once the relevant theory (if any) and Lab 7 are completed. |
-| 9 | Build Your Own MCP Server in Python | MCP | 50 min | Lab 7 + Day 3 setup | Will be uploaded once its theory and Lab 8 are completed. |
+| 8 | [From a Weak Prompt to a Structured Prompt](lab08-prompting-patterns/README.md) | Prompting Fundamentals, Prompting Patterns and Language Practices | 45 min | Lab 7 | Available |
+| 9 | Build Your Own MCP Server in Python | MCP | 50 min | Lab 7 + Day 3 setup | Will be uploaded once its theory if any and Lab 8 are completed. |
 
 No Azure keys, Hugging Face or Neo4j accounts are needed today.
 

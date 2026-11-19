@@ -73,6 +73,6 @@ agentic-ai-copilot-labs/
 │   ├── lab06-prompt-variations/
 ├── day3/
 │   ├── lab07-copilot-in-vscode/ 
-│   ├── lab08-prompting-patterns/ <- Will be uploaded after comletion of lab07
+│   ├── lab08-prompting-patterns/
 │   └── lab09-mcp-server/ <-Will be uploaded after comletion of lab08
 ```
