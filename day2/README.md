@@ -15,16 +15,14 @@ The script reuses your `.venv`, installs the Day 2 packages, adds the new Day 2 
 **While it runs**, create the two free accounts you'll need. Both are web sign-ups in the VM browser:
 
 1. **Hugging Face** account and a **Write** token (Lab 4, Task 1): https://huggingface.co/join
-2. **Neo4j AuraDB Free** instance (Lab 7, Task 1): https://console.neo4j.io. Save the credentials file it gives you!
 
 ## Labs
 
-| # | Lab | Topic it supports | Time | Needs | Availability |
-|---|---|---|---|---|---|
-| 4 | [Hugging Face Hub and CLI](lab04-hf-hub-cli/README.md) | Tools and Ecosystems for LLM Agents | 30 min | Hugging Face account | Available |
-| 5 | [Getting Started with LLM Usage](lab05-llm-usage/README.md) | HF Transformers | 40 min | Prefetched models (or internet). Optional: Pinecone account | Available |
-| 6 | [Prompt Variations and Grounding](lab06-prompt-variations) | Generative AI Fundamentals | 30 min | Azure values from Lab 1 | Available |
-| 7 | Graph Memory Agent | Tools and Ecosystems for LLM Agents (LangChain, LangGraph, Neo4j) | 45 min | Azure values + AuraDB Free instance | Coming Soon (will be added after Lab 6) |
+| # | Lab | Topic it supports | Time | Needs |
+|---|---|---|---|---|
+| 4 | [Hugging Face Hub and CLI](lab04-hf-hub-cli/README.md) | Tools and Ecosystems for LLM Agents | 30 min | Hugging Face account |
+| 5 | [Getting Started with LLM Usage](lab05-llm-usage/README.md) | HF Transformers | 40 min | Prefetched models (or internet). Optional: Pinecone account |
+| 6 | [Prompt Variations and Grounding](lab06-prompt-variations/README.md) | Generative AI Fundamentals | 30 min | Azure values from Lab 1 |
 
 ## How the labs connect
 
@@ -34,11 +32,9 @@ Lab 5  Use models locally: pipelines, generation,  ->  embeddings + FAISS search
        embeddings, semantic search
 Lab 6  Use a large hosted LLM through its API      ->  prompt variations, grounding on the same knowledge base,
                                                        Responsible AI
-Lab 7  Give the LLM tools and memory: an agent     ->  LangChain tool calling, LangGraph, Neo4j graph memory
 ```
 
-All four labs use the same fictional company, **Kaveri Systems**: its helpdesk knowledge base is in `day2/data/helpdesk_kb.json`,
-and its org chart becomes the knowledge graph in Lab 7.
+All three labs use the same fictional company, **Kaveri Systems**: its helpdesk knowledge base is in `day2/data/helpdesk_kb.json`.
 
 Each lab folder contains:
 

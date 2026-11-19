@@ -7,7 +7,8 @@ All labs run on the provided **Windows VM in VS Code**.
 |---|---|---|
 | **1** | AI Fundamentals, Neural Networks, Pre-trained Models | [Day 1 labs](day1/README.md) (start with [Lab 0](day1/lab00-environment-setup/README.md)) |
 | **2** | Tools and Ecosystems for LLM Agents, HF Transformers, GenAI Fundamentals | [Day 2 labs](day2/README.md) (start with *Before you start*) |
-| 3-10 | *coming soon* | |
+| **3** | GitHub Copilot, Prompting Fundamentals and Patterns, MCP | [Day 3 labs](day3/README.md) (start with *Before you start*) |
+| 4-10 | *coming soon* | |
 
 ---
 
@@ -65,10 +66,13 @@ agentic-ai-copilot-labs/
 │   ├── lab01-azure-ai-services/
 │   ├── lab02-transfer-learning/
 │   └── lab03-datasets-tokenizers/
-└── day2/
-    ├── data/                   <- Kaveri Systems helpdesk knowledge base (Labs 5-6)
-    ├── lab04-hf-hub-cli/       <- Available
-    ├── lab05-llm-usage/        <- Available
-    ├── lab06-prompt-variations/ <- Available
-    └── lab07-graph-memory-agent/ <- Will be uploaded after comletion of lab06
+├── day2/
+│   ├── data/                   <- Kaveri Systems helpdesk knowledge base (Labs 5-6, 9)
+│   ├── lab04-hf-hub-cli/
+│   ├── lab05-llm-usage/
+│   ├── lab06-prompt-variations/
+├── day3/
+│   ├── lab07-copilot-in-vscode/ <- Will be uploaded once the theory is completed
+│   ├── lab08-prompting-patterns/ <- Will be uploaded after comletion of lab07
+│   └── lab09-mcp-server/ <-Will be uploaded after comletion of lab08
 ```
