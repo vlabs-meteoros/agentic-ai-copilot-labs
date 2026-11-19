@@ -72,7 +72,7 @@ agentic-ai-copilot-labs/
 │   ├── lab05-llm-usage/
 │   ├── lab06-prompt-variations/
 ├── day3/
-│   ├── lab07-copilot-in-vscode/ <- Will be uploaded fully once the Task01 is done.
+│   ├── lab07-copilot-in-vscode/ 
 │   ├── lab08-prompting-patterns/ <- Will be uploaded after comletion of lab07
 │   └── lab09-mcp-server/ <-Will be uploaded after comletion of lab08
 ```
