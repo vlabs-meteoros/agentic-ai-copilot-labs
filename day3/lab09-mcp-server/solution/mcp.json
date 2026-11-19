@@ -1,0 +1,13 @@
+{
+  "servers": {
+    "kaveri-helpdesk": {
+      "type": "stdio",
+      "command": "${workspaceFolder}/.venv/Scripts/python.exe",
+      "args": ["${workspaceFolder}/day3/lab09-mcp-server/helpdesk_server.py"]
+    },
+    "kaveri-helpdesk-http": {
+      "type": "http",
+      "url": "http://127.0.0.1:8000/mcp"
+    }
+  }
+}

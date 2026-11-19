@@ -1,0 +1,9 @@
+{
+  "servers": {
+    "kaveri-helpdesk": {
+      "type": "stdio",
+      "command": "${workspaceFolder}/.venv/Scripts/python.exe",
+      "args": ["${workspaceFolder}/day3/lab09-mcp-server/helpdesk_server.py"]
+    }
+  }
+}
