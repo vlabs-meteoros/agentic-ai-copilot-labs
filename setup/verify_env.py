@@ -2,7 +2,7 @@
 Check that a lab machine is ready for the labs.
 
     python setup\\verify_env.py                    # packages, hardware, network
-    python setup\\verify_env.py --azure            # + live calls to the shared Azure AI resource (Lab 1, Labs 6-7)
+    python setup\\verify_env.py --azure            # + live calls to the shared Azure AI resource (Lab 1, Labs 6-7, Lab 12)
     python setup\\verify_env.py --neo4j            # + a live connection to your Neo4j AuraDB instance (Lab 7)
 
 Exit code 0 = ready, 1 = something needs fixing.
@@ -49,13 +49,20 @@ def check_packages():
             "huggingface_hub", "sentence_transformers", "faiss", "openai", "langchain", "langchain_openai",
             "langchain_community", "langchain_huggingface", "langgraph", "langchain_neo4j", "neo4j", "pinecone",
             # Day 3
-            "mcp"]
+            "mcp",
+            # Day 4
+            "fastapi", "uvicorn", "pydantic"]
     for name in pkgs:
         try:
             mod = importlib.import_module(name)
             report(OK, f"{name:<32} {getattr(mod, '__version__', '')}")
         except Exception as e:
             report(FAIL, f"{name:<32} not importable: {e}")
+    try:  # optional: only Lab 12 --mic needs it, and it needs a working audio system
+        import sounddevice
+        report(OK, f"{'sounddevice':<32} {sounddevice.__version__}")
+    except Exception as e:
+        report(WARN, f"{'sounddevice':<32} not usable ({type(e).__name__}): Lab 12 works without --mic")
 
 
 def check_hardware():
@@ -146,6 +153,22 @@ def check_env_file(live):
             print("      ", r.text[:300])
     except Exception as e:
         report(FAIL, f"Azure OpenAI call failed: {e}")
+    # Day 4, Lab 12: Azure AI Speech (text to speech) on the same resource, then the regional endpoint
+    ssml = ("<speak version='1.0' xml:lang='en-IN'><voice name='en-IN-NeerjaNeural'>Ready.</voice></speak>")
+    for url in (f"{endpoint}/tts/cognitiveservices/v1", f"https://{region}.tts.speech.microsoft.com/cognitiveservices/v1"):
+        try:
+            r = requests.post(url, data=ssml.encode(), timeout=30,
+                              headers={"Ocp-Apim-Subscription-Key": key, "Content-Type": "application/ssml+xml",
+                                       "X-Microsoft-OutputFormat": "riff-16khz-16bit-mono-pcm",
+                                       "User-Agent": "agentic-ai-copilot-labs"})
+            if r.ok:
+                report(OK, f"Azure Speech text to speech: HTTP {r.status_code} ({len(r.content)} bytes of audio)")
+                break
+        except Exception as e:
+            r = e
+    else:
+        detail = f"HTTP {r.status_code}" if hasattr(r, "status_code") else type(r).__name__
+        report(FAIL, f"Azure Speech text to speech failed: {detail} (Lab 12 needs it)")
 
 
 def check_neo4j():

@@ -1,4 +1,4 @@
-# Exact versions the labs were tested with (Day 1: 2026-11-15, Day 2: 2026-11-16; Day 3: 2026-11-17; Python 3.13, CPU).
+# Exact versions the labs were tested with (Day 1: 2026-11-15, Day 2: 2026-11-16; Day 3: 2026-11-17; Day 4: 2026-11-18; Python 3.13, CPU).
 # Use only if a newer release breaks something:  pip install -r setup\requirements-tested.txt
 accelerate==1.15.0
 azure-ai-textanalytics==5.4.0
@@ -6,6 +6,7 @@ azure-ai-vision-imageanalysis==1.0.0
 azure-core==1.41.0
 datasets==5.2.0
 faiss-cpu==1.16.0
+fastapi==0.164.0
 huggingface_hub==1.33.0
 ipykernel==7.4.0
 ipywidgets==8.1.9
@@ -26,7 +27,9 @@ python-dotenv==1.2.4
 requests==2.34.2
 scikit-learn==1.9.1
 sentence-transformers==6.3.0
+sounddevice==0.5.6
 tiktoken==0.14.0
 tokenizers==0.23.3
 torch==2.15.0
 transformers==5.23.0
+uvicorn==0.54.0
