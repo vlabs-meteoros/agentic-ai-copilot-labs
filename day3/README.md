@@ -18,8 +18,8 @@ While it runs, complete **[Lab 7, Task 1](lab07-copilot-in-vscode/README.md#task
 ## Labs
 
 | # | Lab | Topic it supports | Time | Needs |
-|---|---|---|---|---|---|
-| 7 | [Enable and Explore GitHub Copilot in VS Code](lab07-copilot-in-vscode/README.md)| Prompting Fundamentals | 35 min | Copilot Business seat |
+|---|---|---|---|---|
+| 7 | [Enable and Explore GitHub Copilot in VS Code](lab07-copilot-in-vscode/README.md) | Prompting Fundamentals | 35 min | Copilot Business seat |
 | 8 | [From a Weak Prompt to a Structured Prompt](lab08-prompting-patterns/README.md) | Prompting Fundamentals, Prompting Patterns and Language Practices | 45 min | Lab 7 |
 | 9 | [Build Your Own MCP Server in Python](lab09-mcp-server) | MCP | 50 min | Lab 7 + Day 3 setup |
 
