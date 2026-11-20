@@ -8,7 +8,8 @@ All labs run on the provided **Windows VM in VS Code**.
 | **1** | AI Fundamentals, Neural Networks, Pre-trained Models | [Day 1 labs](day1/README.md) (start with [Lab 0](day1/lab00-environment-setup/README.md)) |
 | **2** | Tools and Ecosystems for LLM Agents, HF Transformers, GenAI Fundamentals | [Day 2 labs](day2/README.md) (start with *Before you start*) |
 | **3** | GitHub Copilot, Prompting Fundamentals and Patterns, MCP | [Day 3 labs](day3/README.md) (start with *Before you start*) |
-| 4-10 | *coming soon* | |
+| **4** | Prompt Engineering for code, Developer Productivity (voice AI), Agent Mode | [Day 4 labs](day4/README.md) (start with *Before you start*) |
+| 5-10 | *coming soon* | |
 
 ---
 
@@ -75,4 +76,10 @@ agentic-ai-copilot-labs/
 │   ├── lab07-copilot-in-vscode/ 
 │   ├── lab08-prompting-patterns/
 │   └── lab09-mcp-server/
+├── day4/
+│   ├── start-kaveridesk.ps1    <- copies the KaveriDesk app to Desktop\kaveridesk (Labs 10 and 12)
+│   ├── kaveridesk/             <- the KaveriDesk helpdesk app (starting point, don't edit here)
+│   ├── lab10-analyze-document-code/ <- Available
+│   ├── lab11-voice-agent/ <- Will be available soon after Lab 10.
+│   └── lab12-agent-mode/ <- Will be available soon after Lab 11.
 ```

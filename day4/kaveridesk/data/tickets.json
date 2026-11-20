@@ -1,0 +1,178 @@
+[
+  {
+    "id": "INC-1001",
+    "title": "VPN shows error 809 when working from home",
+    "category": "IT",
+    "priority": "P2",
+    "requester": "rohit.verma",
+    "created": "2026-11-16 10:15",
+    "status": "resolved",
+    "assignee": "A02",
+    "resolved_at": "2026-11-16 15:30",
+    "notes": [
+      "Switched gateway to India-South-443 (KB-001)"
+    ]
+  },
+  {
+    "id": "INC-1002",
+    "title": "Laptop battery is swelling",
+    "category": "IT",
+    "priority": "P3",
+    "requester": "anita.desai",
+    "created": "2026-11-16 16:40",
+    "status": "resolved",
+    "assignee": "A03",
+    "resolved_at": "2026-11-18 17:00",
+    "notes": [
+      "Replacement laptop issued"
+    ]
+  },
+  {
+    "id": "INC-1003",
+    "title": "October payslip not visible in KaveriPay",
+    "category": "HR",
+    "priority": "P3",
+    "requester": "farhan.ali",
+    "created": "2026-11-17 09:30",
+    "status": "in_progress",
+    "assignee": "A05",
+    "resolved_at": null,
+    "notes": []
+  },
+  {
+    "id": "INC-1004",
+    "title": "Suspicious email with invoice attachment",
+    "category": "Security",
+    "priority": "P1",
+    "requester": "meena.joshi",
+    "created": "2026-11-20 09:20",
+    "status": "in_progress",
+    "assignee": "A04",
+    "resolved_at": null,
+    "notes": []
+  },
+  {
+    "id": "INC-1005",
+    "title": "Projector in Chamundi boardroom not working",
+    "category": "Facilities",
+    "priority": "P3",
+    "requester": "suresh.babu",
+    "created": "2026-11-18 14:00",
+    "status": "in_progress",
+    "assignee": "A08",
+    "resolved_at": null,
+    "notes": []
+  },
+  {
+    "id": "INC-1006",
+    "title": "Reimbursement for Hyderabad trip rejected",
+    "category": "Finance",
+    "priority": "P3",
+    "requester": "kavya.reddy",
+    "created": "2026-11-19 11:30",
+    "status": "in_progress",
+    "assignee": "A06",
+    "resolved_at": null,
+    "notes": []
+  },
+  {
+    "id": "INC-1007",
+    "title": "Account locked after password change",
+    "category": "IT",
+    "priority": "P2",
+    "requester": "vikram.gowda",
+    "created": "2026-11-20 08:30",
+    "status": "in_progress",
+    "assignee": "A01",
+    "resolved_at": null,
+    "notes": []
+  },
+  {
+    "id": "INC-1008",
+    "title": "Request for a second monitor",
+    "category": "IT",
+    "priority": "P4",
+    "requester": "asha.kulkarni",
+    "created": "2026-11-20 10:00",
+    "status": "open",
+    "assignee": null,
+    "resolved_at": null,
+    "notes": []
+  },
+  {
+    "id": "INC-1009",
+    "title": "Wi-Fi keeps dropping on the 3rd floor",
+    "category": "IT",
+    "priority": "P2",
+    "requester": "neha.sharma",
+    "created": "2026-11-18 15:00",
+    "status": "in_progress",
+    "assignee": "A02",
+    "resolved_at": null,
+    "notes": []
+  },
+  {
+    "id": "INC-1010",
+    "title": "Change bank account for salary credit",
+    "category": "HR",
+    "priority": "P3",
+    "requester": "rahul.menon",
+    "created": "2026-11-16 11:00",
+    "status": "resolved",
+    "assignee": "A05",
+    "resolved_at": "2026-11-17 12:00",
+    "notes": [
+      "Updated after document check"
+    ]
+  },
+  {
+    "id": "INC-1011",
+    "title": "Expense tool shows the wrong GST amount",
+    "category": "Finance",
+    "priority": "P2",
+    "requester": "fatima.sheikh",
+    "created": "2026-11-20 09:05",
+    "status": "open",
+    "assignee": null,
+    "resolved_at": null,
+    "notes": []
+  },
+  {
+    "id": "INC-1012",
+    "title": "Air conditioning too cold in Kabini wing",
+    "category": "Facilities",
+    "priority": "P4",
+    "requester": "meera.iyer",
+    "created": "2026-11-17 10:00",
+    "status": "in_progress",
+    "assignee": "A07",
+    "resolved_at": null,
+    "notes": []
+  },
+  {
+    "id": "INC-1013",
+    "title": "MFA prompt not received on new phone",
+    "category": "Security",
+    "priority": "P2",
+    "requester": "arjun.patil",
+    "created": "2026-11-19 12:00",
+    "status": "in_progress",
+    "assignee": "A04",
+    "resolved_at": null,
+    "notes": []
+  },
+  {
+    "id": "INC-1014",
+    "title": "Need access to Finance shared drive",
+    "category": "IT",
+    "priority": "P3",
+    "requester": "divya.pillai",
+    "created": "2026-11-16 09:45",
+    "status": "resolved",
+    "assignee": "A01",
+    "resolved_at": "2026-11-19 10:00",
+    "notes": [
+      "Access granted after manager approval"
+    ]
+  }
+]

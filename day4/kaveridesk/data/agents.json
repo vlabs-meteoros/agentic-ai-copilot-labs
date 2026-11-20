@@ -1,0 +1,58 @@
+[
+  {
+    "id": "A01",
+    "name": "Ravi Shankar",
+    "team": "Service Desk",
+    "max_open": 5,
+    "lead": true
+  },
+  {
+    "id": "A02",
+    "name": "Priya Nair",
+    "team": "Service Desk",
+    "max_open": 5,
+    "lead": false
+  },
+  {
+    "id": "A03",
+    "name": "Imran Khan",
+    "team": "Service Desk",
+    "max_open": 5,
+    "lead": false
+  },
+  {
+    "id": "A04",
+    "name": "Deepa Menon",
+    "team": "Security Ops",
+    "max_open": 4,
+    "lead": true
+  },
+  {
+    "id": "A05",
+    "name": "Sneha Kulkarni",
+    "team": "People Ops",
+    "max_open": 4,
+    "lead": true
+  },
+  {
+    "id": "A06",
+    "name": "Karthik Hegde",
+    "team": "Finance Ops",
+    "max_open": 4,
+    "lead": true
+  },
+  {
+    "id": "A07",
+    "name": "Manjunath Gowda",
+    "team": "Facilities",
+    "max_open": 3,
+    "lead": true
+  },
+  {
+    "id": "A08",
+    "name": "Lakshmi Bhat",
+    "team": "Facilities",
+    "max_open": 1,
+    "lead": false
+  }
+]
