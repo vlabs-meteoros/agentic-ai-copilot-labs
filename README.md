@@ -80,6 +80,6 @@ agentic-ai-copilot-labs/
 │   ├── start-kaveridesk.ps1    <- copies the KaveriDesk app to Desktop\kaveridesk (Labs 10 and 12)
 │   ├── kaveridesk/             <- the KaveriDesk helpdesk app (starting point, don't edit here)
 │   ├── lab10-analyze-document-code/ <- Available
-│   ├── lab11-voice-agent/ <- Will be available soon after Lab 10.
+│   ├── lab11-voice-agent/ <- Available
 │   └── lab12-agent-mode/ <- Will be available soon after Lab 11.
 ```

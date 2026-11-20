@@ -22,7 +22,7 @@ Day 4 adds a few small packages (`fastapi`, `uvicorn`, `sounddevice`), so there'
 | # | Lab | Topic it supports | Time | Needs | Availability |
 |---|---|---|---|---|---|
 | 10 | [Analyze and Document Unfamiliar Code](lab10-analyze-document-code/README.md) | Prompt Engineering | 40 min | Copilot | Available |
-| 11 | A Conversational Voice Coding Assistant | Developer Productivity | 55 min | Azure values in `.env`. Microphone and speakers optional | Available after Lab 10 is completed |
+| 11 | [A Conversational Voice Coding Assistant](lab11-voice-agent) | Developer Productivity | 55 min | Azure values in `.env`. Microphone and speakers optional | Available |
 | 12 | Build New Features with Agent Mode | Agent Mode | 50 min | Copilot, your `kaveridesk` copy from Lab 10 | Available after Lab 11 is completed |
 
 ## How the labs connect
