@@ -9,7 +9,8 @@ All labs run on the provided **Windows VM in VS Code**.
 | **2** | Tools and Ecosystems for LLM Agents, HF Transformers, GenAI Fundamentals | [Day 2 labs](day2/README.md) (start with *Before you start*) |
 | **3** | GitHub Copilot, Prompting Fundamentals and Patterns, MCP | [Day 3 labs](day3/README.md) (start with *Before you start*) |
 | **4** | Prompt Engineering for code, Developer Productivity (voice AI), Agent Mode | [Day 4 labs](day4/README.md) (start with *Before you start*) |
-| 5-10 | *coming soon* | |
+| **5** | Copilot Chat & Agent Mode on legacy code (context, multi-modal), refactoring, unit tests | [Day 5 labs](day5/README.md) (start with *Before you start*) |
+| 6-10 | *coming soon* | |
 
 ---
 
