@@ -1,4 +1,4 @@
-# Exact versions the labs were tested with (Day 1: 2026-11-15, Day 2: 2026-11-16; Day 3: 2026-11-17; Day 4: 2026-11-18; Python 3.13, CPU).
+# Exact versions the labs were tested with (Day 1: 2026-11-15, Day 2: 2026-11-16; Day 3: 2026-11-17; Day 4: 2026-11-18; Day 5: 2026-11-19; Python 3.13, CPU).
 # Use only if a newer release breaks something:  pip install -r setup\requirements-tested.txt
 accelerate==1.15.0
 azure-ai-textanalytics==5.4.0
@@ -23,6 +23,8 @@ numpy==2.5.4
 openai==3.51.0
 pandas==3.1.1
 pinecone==10.3.0
+pytest-cov==7.1.0
+pytest==9.2.0
 python-dotenv==1.2.4
 requests==2.34.2
 scikit-learn==1.9.1

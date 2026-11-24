@@ -1,0 +1,13 @@
+emp_id,name,grade,city,manager,cost_centre
+E01,Ananya Rao,G2,Bengaluru,E09,CC-ENG
+E02,Rahul Menon,G1,Bengaluru,E09,CC-ENG
+E03,Priya Nair,G3,Mysuru,E10,CC-SALES
+E04,Arjun Iyer,G1,Pune,E09,CC-ENG
+E05,Meera Kulkarni,G2,Mysuru,E10,CC-SALES
+E06,Kavya Shetty,G2,Mysuru,E10,CC-SALES
+E07,Nikhil Joshi,G3,Hyderabad,E11,CC-OPS
+E08,Rekha Hegde,G1,Mangaluru,E11,CC-OPS
+E09,Vikram Desai,G4,Bengaluru,E12,CC-ENG
+E10,Sneha Patil,G4,Mumbai,E12,CC-SALES
+E11,Farhan Sheikh,G3,Chennai,E12,CC-OPS
+E12,Deepa Krishnan,G4,Bengaluru,,CC-EXEC

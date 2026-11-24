@@ -82,4 +82,10 @@ agentic-ai-copilot-labs/
 │   ├── lab10-analyze-document-code/
 │   ├── lab11-voice-agent/ 
 │   └── lab12-agent-mode/ 
+└── day5/
+    ├── start-kavericlaims.ps1  <- copies the KaveriClaims app to Desktop\kavericlaims (Labs 13-15)
+    ├── kavericlaims/           <- the KaveriClaims expense-claims app (starting point, don't edit here)
+    ├── lab13-context-multimodal/
+    ├── lab14-refactor/
+    └── lab15-unit-tests/
 ```

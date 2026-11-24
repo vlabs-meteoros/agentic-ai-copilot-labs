@@ -2,8 +2,7 @@
 Check that a lab machine is ready for the labs.
 
     python setup\\verify_env.py                    # packages, hardware, network
-    python setup\\verify_env.py --azure            # + live calls to the shared Azure AI resource (Lab 1, Labs 6-7, Lab 12)
-    python setup\\verify_env.py --neo4j            # + a live connection to your Neo4j AuraDB instance (Lab 7)
+    python setup\\verify_env.py --azure            # + live calls to the shared Azure AI resource (Lab 1, Lab 6, Labs 11 and 13)
 
 Exit code 0 = ready, 1 = something needs fixing.
 """
@@ -51,7 +50,9 @@ def check_packages():
             # Day 3
             "mcp",
             # Day 4
-            "fastapi", "uvicorn", "pydantic"]
+            "fastapi", "uvicorn", "pydantic",
+            # Day 5
+            "pytest", "pytest_cov"]
     for name in pkgs:
         try:
             mod = importlib.import_module(name)
@@ -153,6 +154,25 @@ def check_env_file(live):
             print("      ", r.text[:300])
     except Exception as e:
         report(FAIL, f"Azure OpenAI call failed: {e}")
+    # Day 5, Lab 13: the same deployment must accept an image (vision)
+    receipt = ROOT / "day5" / "kavericlaims" / "receipts" / "CCW-2026-11873.png"
+    if receipt.exists():
+        import base64
+        image_url = "data:image/png;base64," + base64.b64encode(receipt.read_bytes()).decode("ascii")
+        try:
+            r = requests.post(f"{endpoint}/openai/v1/chat/completions",
+                              headers={"api-key": key},
+                              json={"model": deployment, "max_tokens": 10,
+                                    "messages": [{"role": "user", "content": [
+                                        {"type": "text", "text": "What is the first word printed on this receipt? One word."},
+                                        {"type": "image_url", "image_url": {"url": image_url, "detail": "low"}}]}]},
+                              timeout=60)
+            report(OK if r.ok else FAIL, f"Azure OpenAI image input ({deployment}): HTTP {r.status_code}"
+                   + (f" -> {r.json()['choices'][0]['message']['content']!r}" if r.ok else " (Lab 13 needs it)"))
+            if not r.ok:
+                print("      ", r.text[:300])
+        except Exception as e:
+            report(FAIL, f"Azure OpenAI image call failed: {e}")
     # Day 4, Lab 12: Azure AI Speech (text to speech) on the same resource, then the regional endpoint
     ssml = ("<speak version='1.0' xml:lang='en-IN'><voice name='en-IN-NeerjaNeural'>Ready.</voice></speak>")
     for url in (f"{endpoint}/tts/cognitiveservices/v1", f"https://{region}.tts.speech.microsoft.com/cognitiveservices/v1"):

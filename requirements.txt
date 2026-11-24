@@ -1,5 +1,5 @@
-# Agentic AI with Copilot - lab dependencies (Days 1-4)
-# Day 1 tested with Python 3.12/3.13 on 2026-11-15; Day 2 on 2026-11-16; Day 3 on 2026-11-17; Day 4 on 2026-11-18. Exact tested versions: setup/requirements-tested.txt
+# Agentic AI with Copilot - lab dependencies (Days 1-5)
+# Day 1 tested with Python 3.12/3.13 on 2026-11-15; Day 2 on 2026-11-16; Day 3 on 2026-11-17; Day 4 on 2026-11-18; Day 5 on 2026-11-19. Exact tested versions: setup/requirements-tested.txt
 #
 # On Windows, `pip install torch` from PyPI installs the CPU build.
 # For an NVIDIA GPU run setup-windows.ps1 with -Cuda.
@@ -47,6 +47,10 @@ mcp>=2.3,<3                  # official MCP Python SDK, v2 (MCPServer; v1 called
 sounddevice>=0.5              # Lab 12 --mic only: records from the microphone (Windows wheel includes PortAudio)
 fastapi>=0.115                # Lab 13: the API that Copilot generates; TestClient uses httpx (comes with openai)
 uvicorn>=0.30                 # Lab 13: runs the API
+
+# --- Day 5: unit tests for the KaveriClaims app (Labs 14-15); Lab 13 reuses openai + pydantic for vision
+pytest>=8.3
+pytest-cov>=6.0               # Lab 15: python -m pytest --cov
 
 # --- Notebooks in VS Code
 ipykernel>=6.29
