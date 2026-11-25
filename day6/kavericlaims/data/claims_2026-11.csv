@@ -1,0 +1,25 @@
+claim_id,emp_id,date,category,city,amount,currency,qty,receipt,status,description
+C-1101,E01,2026-11-02,MEAL,Bengaluru,450.00,INR,1,R-1101.jpg,approved,Lunch with Hoysala Bank team
+C-1102,E01,2026-11-02,MEAL,Bengaluru,500.00,INR,1,R-1102.jpg,approved,Dinner with Hoysala Bank team
+C-1103,E02,2026-11-03,INTERNET,Bengaluru,700.00,INR,1,R-1103.pdf,approved,Home broadband October
+C-1104,E02,2026-11-03,TRAVEL,Bengaluru,180.00,INR,1,,approved,Auto to client office
+C-1105,E03,2026-11-04,MEAL,Mysuru,750.00,INR,1,R-1105.jpg,submitted,Client lunch at Radisson Mysuru
+C-1106,E03,2026-11-05,HOTEL,Mysuru,4200.00,INR,1,R-1106.pdf,rejected,Hotel during home-city visit
+C-1107,E05,2026-11-05,OTHER,Mysuru,2450.00,INR,1,R-1107.pdf,approved,Trade fair stall registration
+C-1108,E07,2026-11-06,HOTEL,Hyderabad,13000.00,INR,2,R-1108.pdf,approved,Hotel for 2 nights - datacentre audit
+C-1109,E09,2026-11-09,HOTEL,Singapore,180.00,SGD,1,R-1109.pdf,approved,Hotel at AI summit
+C-1110,E10,2026-11-10,MEAL,Dubai,85.00,AED,1,R-1110.jpg,approved,Dinner with distributor
+C-1111,E11,2026-11-10,TRAVEL,Chennai,42.50,USD,1,R-1111.pdf,submitted,Airport taxi booked on US site
+C-1112,E04,2026-11-11,MEAL,Pune,500.00,INR,1,,submitted,Team dinner after release
+C-1113,E08,2026-11-12,TRAVEL,Mangaluru,820.00,INR,1,,submitted,Taxi to Udupi site
+C-1114,E02,2026-11-13,INTERNET,Bengaluru,600.00,INR,1,R-1114.pdf,approved,Mobile data top-up
+C-1115,E06,2026-11-15,MEAL,Mysuru,640.00,INR,1,R-1115.jpg,submitted,Lunch with visiting auditors
+C-1116,E05,2026-11-16,TRAVEL,Bengaluru,2350.00,INR,1,R-1116.pdf,approved,Train Mysuru-Bengaluru return
+C-1117,E07,2026-11-17,MEAL,Hyderabad,380.00,INR,1,,approved,Breakfast at site
+C-1118,E09,2026-11-18,MEAL,Bengaluru,1620.00,INR,1,R-1118.jpg,approved,Board dinner
+C-1119,E12,2026-11-18,TRAVEL,Delhi,8900.00,INR,1,R-1119.pdf,approved,Flight to Delhi
+C-1120,E11,2026-11-19,OTHER,Chennai,1800.00,INR,1,R-1120.pdf,submitted,Safety training course
+C-1121,E01,2026-11-20,TRAVEL,Mumbai,4800.00,INR,1,R-1121.pdf,submitted,Flight to Mumbai
+C-1122,E10,2026-11-21,HOTEL,Mumbai,8200.00,INR,1,R-1122.pdf,submitted,Hotel for partner meet
+C-1123,E08,2026-11-23,INTERNET,Mangaluru,450.00,INR,1,,approved,Mobile data top-up
+C-1124,E06,2026-11-24,MEAL,Mysuru,300.00,INR,1,R-1124.jpg,rejected,Personal lunch

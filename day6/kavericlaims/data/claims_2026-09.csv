@@ -1,0 +1,16 @@
+claim_id,emp_id,date,category,city,amount,currency,qty,receipt,status,description
+C-0901,E01,2026-09-02,MEAL,Bengaluru,640.00,INR,1,R-0901.jpg,approved,Lunch with Hoysala Bank team
+C-0902,E01,2026-09-04,MEAL,Bengaluru,640.00,INR,1,R-0902.jpg,submitted,Lunch with Hoysala Bank team
+C-0903,E02,2026-09-05,INTERNET,Bengaluru,799.00,INR,1,R-0903.pdf,approved,Home broadband August
+C-0904,E03,2026-09-08,TRAVEL,Mysuru,1450.00,INR,1,R-0904.pdf,approved,Driver's allowance for Mandya visit
+C-0905,E05,2026-09-09,OTHER,Mysuru,1250.00,INR,1,R-0905.pdf,approved,Printed brochures
+C-0906,E07,2026-09-10,HOTEL,Hyderabad,5800.00,INR,1,R-0906.pdf,approved,Hotel for datacentre audit
+C-0907,E03,2026-09-11,TRAVEL,Mysuru,1450.00,INR,1,R-0907.pdf,approved,Driver's allowance for Mandya visit
+C-0908,E05,2026-09-12,OTHER,Mysuru,1250.00,INR,1,R-0908.pdf,approved,Printed brochures (reprint)
+C-0909,E09,2026-09-15,MEAL,Bengaluru,1180.00,INR,1,R-0909.jpg,approved,Dinner with Ganga Retail board
+C-0910,E08,2026-09-18,TRAVEL,Mangaluru,380.00,INR,1,,approved,Auto to Udupi site
+C-0911,E08,2026-09-18,TRAVEL,Mangaluru,380.00,INR,1,,approved,Auto from Udupi site
+C-0912,E04,2026-09-22,MEAL,Pune,420.00,INR,1,R-0912.jpg,rejected,Team lunch
+C-0913,E04,2026-09-23,MEAL,Pune,420.00,INR,1,R-0913.jpg,approved,Team lunch
+C-0914,E10,2026-09-25,HOTEL,Mumbai,8200.00,INR,1,R-0914.pdf,approved,Hotel for partner meet
+C-0915,E01,2026-09-30,MEAL,Bengaluru,640.00,INR,1,R-0915.jpg,approved,Lunch with Hoysala Bank team

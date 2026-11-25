@@ -1,5 +1,5 @@
-# Agentic AI with Copilot - lab dependencies (Days 1-5)
-# Day 1 tested with Python 3.12/3.13 on 2026-11-15; Day 2 on 2026-11-16; Day 3 on 2026-11-17; Day 4 on 2026-11-18; Day 5 on 2026-11-19. Exact tested versions: setup/requirements-tested.txt
+# Agentic AI with Copilot - lab dependencies (Days 1-6)
+# Day 1 tested with Python 3.12/3.13 on 2026-11-15; Day 2 on 2026-11-16; Day 3 on 2026-11-17; Day 4 on 2026-11-18; Day 5 on 2026-11-19; Day 6 on 2026-11-23. Exact tested versions: setup/requirements-tested.txt
 #
 # On Windows, `pip install torch` from PyPI installs the CPU build.
 # For an NVIDIA GPU run setup-windows.ps1 with -Cuda.
@@ -51,6 +51,11 @@ uvicorn>=0.30                 # Lab 13: runs the API
 # --- Day 5: unit tests for the KaveriClaims app (Labs 14-15); Lab 13 reuses openai + pydantic for vision
 pytest>=8.3
 pytest-cov>=6.0               # Lab 15: python -m pytest --cov
+
+# --- Day 6 --- 
+pytest-bdd>=8.1               
+ruff>=0.15                    
+bandit>=1.8                   
 
 # --- Notebooks in VS Code
 ipykernel>=6.29

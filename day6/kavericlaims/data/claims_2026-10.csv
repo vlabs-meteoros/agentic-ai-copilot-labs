@@ -1,0 +1,8 @@
+claim_id,emp_id,date,category,city,amount,currency,qty,receipt,status,description
+C-1001,E01,2026-10-05,MEAL,Bengaluru,620.00,INR,1,R-1001.jpg,approved,Lunch with Ganga Retail team
+C-1002,E03,2026-10-07,TRAVEL,Bengaluru,2350.00,INR,1,R-1002.pdf,approved,Train Mysuru-Bengaluru return
+C-1003,E07,2026-10-09,HOTEL,Pune,5400.00,INR,1,R-1003.pdf,approved,Hotel for vendor visit
+C-1004,E10,2026-10-14,MEAL,Dubai,60.00,AED,1,R-1004.jpg,approved,Lunch with distributor
+C-1005,E05,2026-10-16,OTHER,Mysuru,"1,250.00",INR,1,R-1005.pdf,approved,Printed brochures
+C-1006,E02,2026-10-21,INTERNET,Bengaluru,999.00,INR,1,R-1006.pdf,approved,Home broadband September
+C-1007,E11,2026-10-27,TRAVEL,Chennai,35.00,USD,1,R-1007.pdf,approved,Airport taxi booked on US site

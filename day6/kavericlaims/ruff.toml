@@ -1,0 +1,19 @@
+# Static analysis rules for KaveriClaims (Lab 17). Run: ruff check .
+line-length = 130
+target-version = "py310"
+
+[lint]
+select = [
+    "E", "W",   # pycodestyle: style errors and warnings
+    "F",        # pyflakes: unused imports and variables, undefined names
+    "B",        # flake8-bugbear: likely bugs, such as mutable default arguments
+    "UP",       # pyupgrade: old Python idioms
+    "SIM",      # flake8-simplify: code that can be simpler
+    "C90",      # mccabe: functions that are too complex
+]
+ignore = [
+    "UP031",    # "%" string formatting: allowed here, the report's column layout depends on it
+]
+
+[lint.mccabe]
+max-complexity = 10

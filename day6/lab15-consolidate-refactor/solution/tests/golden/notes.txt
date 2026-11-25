@@ -1,0 +1,91 @@
+C-0901 640.00 -
+    MEAL limit for G2 in tier 1: 800.00 per day, 0.00 already used that day
+C-0902 640.00 -
+    MEAL limit for G2 in tier 1: 800.00 per day, 0.00 already used that day
+C-0903 799.00 -
+    INTERNET limit: 1000.00 per month, 0.00 already used that month
+C-0904 1450.00 -
+    TRAVEL has no limit
+C-0905 1250.00 -
+    OTHER limit: 2000.00 per claim
+C-0906 5800.00 -
+    HOTEL limit for G3 in tier 1: 6000.00 per night x 1 night(s)
+C-0907 1450.00 -
+    TRAVEL has no limit
+C-0908 1250.00 -
+    OTHER limit: 2000.00 per claim
+C-0909 1180.00 -
+    MEAL limit for G4 in tier 1: 1500.00 per day, 0.00 already used that day
+C-0910 380.00 -
+    TRAVEL has no limit
+C-0911 380.00 -
+    TRAVEL has no limit
+C-0913 420.00 -
+    MEAL limit for G1 in tier 1: 600.00 per day, 0.00 already used that day
+C-0914 8200.00 -
+    HOTEL limit for G4 in tier 1: 9000.00 per night x 1 night(s)
+C-0915 640.00 -
+    MEAL limit for G2 in tier 1: 800.00 per day, 0.00 already used that day
+C-1001 620.00 -
+    MEAL limit for G2 in tier 1: 800.00 per day, 0.00 already used that day
+C-1002 2350.00 -
+    TRAVEL has no limit
+C-1003 5400.00 -
+    HOTEL limit for G3 in tier 1: 6000.00 per night x 1 night(s)
+C-1004 1371.60 -
+    60.00 AED converted at 22.86 = 1371.60 INR
+    MEAL limit for G4 in tier 1: 1500.00 per day, 0.00 already used that day
+C-1005 1250.00 -
+    OTHER limit: 2000.00 per claim
+C-1006 999.00 -
+    INTERNET limit: 1000.00 per month, 0.00 already used that month
+C-1007 2938.25 -
+    35.00 USD converted at 83.95 = 2938.25 INR
+    TRAVEL has no limit
+C-1101 450.00 -
+    MEAL limit for G2 in tier 1: 800.00 per day, 0.00 already used that day
+C-1102 350.00 OVER_LIMIT
+    MEAL limit for G2 in tier 1: 800.00 per day, 450.00 already used that day
+C-1103 700.00 -
+    INTERNET limit: 1000.00 per month, 0.00 already used that month
+C-1104 180.00 -
+    TRAVEL has no limit
+C-1105 750.00 -
+    MEAL limit for G3 in tier 2: 800.00 per day, 0.00 already used that day
+C-1107 2000.00 OVER_LIMIT
+    OTHER limit: 2000.00 per claim
+C-1108 12000.00 OVER_LIMIT
+    HOTEL limit for G3 in tier 1: 6000.00 per night x 2 night(s)
+C-1109 9000.00 OVER_LIMIT
+    180.00 SGD converted at 64.90 = 11682.00 INR
+    HOTEL limit for G4 in tier 1: 9000.00 per night x 1 night(s)
+C-1110 1500.00 OVER_LIMIT
+    85.00 AED converted at 22.93 = 1949.05 INR
+    MEAL limit for G4 in tier 1: 1500.00 per day, 0.00 already used that day
+C-1111 3578.50 -
+    42.50 USD converted at 84.20 = 3578.50 INR
+    TRAVEL has no limit
+C-1112 0.00 NO_RECEIPT
+    No receipt for a claim of 500.00 or more: nothing reimbursed
+C-1113 0.00 NO_RECEIPT
+    No receipt for a claim of 500.00 or more: nothing reimbursed
+C-1114 300.00 OVER_LIMIT
+    INTERNET limit: 1000.00 per month, 700.00 already used that month
+C-1115 600.00 OVER_LIMIT
+    MEAL limit for G2 in tier 2: 600.00 per day, 0.00 already used that day
+C-1116 2350.00 -
+    TRAVEL has no limit
+C-1117 380.00 -
+    MEAL limit for G3 in tier 1: 1000.00 per day, 0.00 already used that day
+C-1118 1500.00 OVER_LIMIT
+    MEAL limit for G4 in tier 1: 1500.00 per day, 0.00 already used that day
+C-1119 8900.00 -
+    TRAVEL has no limit
+C-1120 1800.00 -
+    OTHER limit: 2000.00 per claim
+C-1121 4800.00 -
+    TRAVEL has no limit
+C-1122 8200.00 -
+    HOTEL limit for G4 in tier 1: 9000.00 per night x 1 night(s)
+C-1123 450.00 -
+    INTERNET limit: 1000.00 per month, 0.00 already used that month

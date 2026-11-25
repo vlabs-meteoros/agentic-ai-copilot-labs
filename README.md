@@ -10,7 +10,8 @@ All labs run on the provided **Windows VM in VS Code**.
 | **3** | GitHub Copilot, Prompting Fundamentals and Patterns, MCP | [Day 3 labs](day3/README.md) (start with *Before you start*) |
 | **4** | Prompt Engineering for code, Developer Productivity (voice AI), Agent Mode | [Day 4 labs](day4/README.md) (start with *Before you start*) |
 | **5** | Copilot Chat & Agent Mode on legacy code (context, multi-modal), refactoring, unit tests | [Day 5 labs](day5/README.md) (start with *Before you start*) |
-| 6-10 | *coming soon* | |
+| **6** | Debugging (TDD/BDD, static analysis, security), Code Understanding and Migration, Code Review | [Day 6 labs](day6/README.md) (start with *Before you start*) |
+| 7-10 | *coming soon* | |
 
 ---
 
@@ -83,9 +84,14 @@ agentic-ai-copilot-labs/
 │   ├── lab10-analyze-document-code/
 │   ├── lab11-voice-agent/ 
 │   └── lab12-agent-mode/ 
-└── day5/
-    ├── start-kavericlaims.ps1  <- copies the KaveriClaims app to Desktop\kavericlaims (Labs 13-14)
-    ├── kavericlaims/           <- the KaveriClaims expense-claims app (starting point, don't edit here)
-    ├── lab13-context-multimodal/
-    └── lab14-unit-tests/
+├── day5/
+│   ├── start-kavericlaims.ps1  <- copies the KaveriClaims app to Desktop\kavericlaims (Labs 13 and 14)
+│   ├── kavericlaims/           <- the KaveriClaims expense-claims app (starting point, don't edit here)
+│   ├── lab13-context-multimodal/
+│   └── lab14-unit-tests/
+└── day6/
+    ├── start-kavericlaims-day6.ps1  <- copies KaveriClaims 2.0 to Desktop\kavericlaims-day6 (Labs 15 and 16)
+    ├── kavericlaims/                <- KaveriClaims 2.0 (starting point, don't edit here)
+    ├── lab15-consolidate-refactor/
+    └── lab16-debug-tdd-sca/
 ```

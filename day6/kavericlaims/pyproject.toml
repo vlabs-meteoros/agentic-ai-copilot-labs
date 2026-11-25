@@ -1,0 +1,10 @@
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+
+[tool.coverage.run]
+source = ["kavericlaims"]
+omit = ["kavericlaims/bench.py", "kavericlaims/__main__.py"]
+
+[tool.bandit]
+exclude_dirs = ["tests", ".venv"]

@@ -1,0 +1,209 @@
+{
+ "get_tier": [
+  {
+   "city": "Bengaluru",
+   "currency": "INR",
+   "expected": 1
+  },
+  {
+   "city": "bengaluru",
+   "currency": "INR",
+   "expected": 1
+  },
+  {
+   "city": "PUNE",
+   "currency": "INR",
+   "expected": 1
+  },
+  {
+   "city": "Mysuru",
+   "currency": "INR",
+   "expected": 2
+  },
+  {
+   "city": "Mangaluru",
+   "currency": "INR",
+   "expected": 2
+  },
+  {
+   "city": "Hubballi",
+   "currency": "INR",
+   "expected": 2
+  },
+  {
+   "city": "Dubai",
+   "currency": "AED",
+   "expected": 1
+  },
+  {
+   "city": "Singapore",
+   "currency": "SGD",
+   "expected": 1
+  },
+  {
+   "city": "Mysuru",
+   "currency": "USD",
+   "expected": 1
+  }
+ ],
+ "get_limit": [
+  {
+   "category": "MEAL",
+   "grade": "G1",
+   "tier": 1,
+   "expected": 600
+  },
+  {
+   "category": "MEAL",
+   "grade": "G1",
+   "tier": 2,
+   "expected": 450
+  },
+  {
+   "category": "MEAL",
+   "grade": "G2",
+   "tier": 1,
+   "expected": 800
+  },
+  {
+   "category": "MEAL",
+   "grade": "G2",
+   "tier": 2,
+   "expected": 600
+  },
+  {
+   "category": "MEAL",
+   "grade": "G3",
+   "tier": 1,
+   "expected": 1000
+  },
+  {
+   "category": "MEAL",
+   "grade": "G3",
+   "tier": 2,
+   "expected": 800
+  },
+  {
+   "category": "MEAL",
+   "grade": "G4",
+   "tier": 1,
+   "expected": 1500
+  },
+  {
+   "category": "MEAL",
+   "grade": "G4",
+   "tier": 2,
+   "expected": 1200
+  },
+  {
+   "category": "HOTEL",
+   "grade": "G1",
+   "tier": 1,
+   "expected": 3000
+  },
+  {
+   "category": "HOTEL",
+   "grade": "G1",
+   "tier": 2,
+   "expected": 2000
+  },
+  {
+   "category": "HOTEL",
+   "grade": "G2",
+   "tier": 1,
+   "expected": 4000
+  },
+  {
+   "category": "HOTEL",
+   "grade": "G2",
+   "tier": 2,
+   "expected": 3000
+  },
+  {
+   "category": "HOTEL",
+   "grade": "G3",
+   "tier": 1,
+   "expected": 6000
+  },
+  {
+   "category": "HOTEL",
+   "grade": "G3",
+   "tier": 2,
+   "expected": 4500
+  },
+  {
+   "category": "HOTEL",
+   "grade": "G4",
+   "tier": 1,
+   "expected": 9000
+  },
+  {
+   "category": "HOTEL",
+   "grade": "G4",
+   "tier": 2,
+   "expected": 7000
+  },
+  {
+   "category": "INTERNET",
+   "grade": "G1",
+   "tier": 1,
+   "expected": 1000
+  },
+  {
+   "category": "INTERNET",
+   "grade": "G4",
+   "tier": 2,
+   "expected": 1000
+  },
+  {
+   "category": "OTHER",
+   "grade": "G2",
+   "tier": 2,
+   "expected": 2000
+  },
+  {
+   "category": "TRAVEL",
+   "grade": "G3",
+   "tier": 1,
+   "expected": -1
+  },
+  {
+   "category": "MEAL",
+   "grade": "G9",
+   "tier": 1,
+   "expected": 0
+  },
+  {
+   "category": "PARKING",
+   "grade": "G1",
+   "tier": 1,
+   "expected": 0
+  }
+ ],
+ "needs_receipt": [
+  {
+   "amount": 0,
+   "expected": false
+  },
+  {
+   "amount": 120.5,
+   "expected": false
+  },
+  {
+   "amount": 499.99,
+   "expected": false
+  },
+  {
+   "amount": 500,
+   "expected": true
+  },
+  {
+   "amount": 500.01,
+   "expected": true
+  },
+  {
+   "amount": 13000,
+   "expected": true
+  }
+ ]
+}

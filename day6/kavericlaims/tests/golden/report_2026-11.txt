@@ -1,0 +1,42 @@
+KAVERI SYSTEMS - EXPENSE CLAIMS REPORT - 2026-11
+==============================================================================
+CLAIM   EMP  NAME             CATEGORY       CLAIMED    REIMBURSE  FLAGS
+C-1101  E01  Ananya Rao       MEAL            450.00       450.00
+C-1102  E01  Ananya Rao       MEAL            500.00       350.00  OVER_LIMIT
+C-1103  E02  Rahul Menon      INTERNET        700.00       700.00
+C-1104  E02  Rahul Menon      TRAVEL          180.00       180.00
+C-1105  E03  Priya Nair       MEAL            750.00       750.00
+C-1107  E05  Meera Kulkarni   OTHER         2,450.00     2,000.00  OVER_LIMIT
+C-1108  E07  Nikhil Joshi     HOTEL        13,000.00    12,000.00  OVER_LIMIT
+C-1109  E09  Vikram Desai     HOTEL        11,682.00     9,000.00  OVER_LIMIT
+C-1110  E10  Sneha Patil      MEAL          1,949.05     1,500.00  OVER_LIMIT
+C-1111  E11  Farhan Sheikh    TRAVEL        3,578.50     3,578.50
+C-1112  E04  Arjun Iyer       MEAL            500.00         0.00  NO_RECEIPT
+C-1113  E08  Rekha Hegde      TRAVEL          820.00         0.00  NO_RECEIPT
+C-1114  E02  Rahul Menon      INTERNET        600.00       300.00  OVER_LIMIT
+C-1115  E06  Kavya Shetty     MEAL            640.00       600.00  OVER_LIMIT
+C-1116  E05  Meera Kulkarni   TRAVEL        2,350.00     2,350.00
+C-1117  E07  Nikhil Joshi     MEAL            380.00       380.00
+C-1118  E09  Vikram Desai     MEAL          1,620.00     1,500.00  OVER_LIMIT
+C-1119  E12  Deepa Krishnan   TRAVEL        8,900.00     8,900.00
+C-1120  E11  Farhan Sheikh    OTHER         1,800.00     1,800.00
+C-1121  E01  Ananya Rao       TRAVEL        4,800.00     4,800.00
+C-1122  E10  Sneha Patil      HOTEL         8,200.00     8,200.00
+C-1123  E08  Rekha Hegde      INTERNET        450.00       450.00
+------------------------------------------------------------------------------
+TOTALS BY EMPLOYEE (highest reimbursement first)
+E07  Nikhil Joshi       2 claim(s)  claimed    13,380.00  reimbursable    12,380.00
+E09  Vikram Desai       2 claim(s)  claimed    13,302.00  reimbursable    10,500.00
+E10  Sneha Patil        2 claim(s)  claimed    10,149.05  reimbursable     9,700.00
+E12  Deepa Krishnan     1 claim(s)  claimed     8,900.00  reimbursable     8,900.00
+E01  Ananya Rao         3 claim(s)  claimed     5,750.00  reimbursable     5,600.00
+E11  Farhan Sheikh      2 claim(s)  claimed     5,378.50  reimbursable     5,378.50
+E05  Meera Kulkarni     2 claim(s)  claimed     4,800.00  reimbursable     4,350.00
+E02  Rahul Menon        3 claim(s)  claimed     1,480.00  reimbursable     1,180.00
+E03  Priya Nair         1 claim(s)  claimed       750.00  reimbursable       750.00
+E06  Kavya Shetty       1 claim(s)  claimed       640.00  reimbursable       600.00
+E08  Rekha Hegde        2 claim(s)  claimed     1,270.00  reimbursable       450.00
+E04  Arjun Iyer         1 claim(s)  claimed       500.00  reimbursable         0.00
+------------------------------------------------------------------------------
+Claims: 22   Flagged: 10
+Claimed: 66,299.55   Reimbursable: 59,788.50   Not reimbursed: 6,511.05

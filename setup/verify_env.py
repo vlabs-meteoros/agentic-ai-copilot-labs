@@ -52,7 +52,9 @@ def check_packages():
             # Day 4
             "fastapi", "uvicorn", "pydantic",
             # Day 5
-            "pytest", "pytest_cov"]
+            "pytest", "pytest_cov",
+            # Day 6
+            "pytest_bdd", "bandit"]
     for name in pkgs:
         try:
             mod = importlib.import_module(name)
@@ -64,6 +66,23 @@ def check_packages():
         report(OK, f"{'sounddevice':<32} {sounddevice.__version__}")
     except Exception as e:
         report(WARN, f"{'sounddevice':<32} not usable ({type(e).__name__}): Lab 12 works without --mic")
+
+
+def check_tools():
+    """Command-line tools the labs call: ruff and bandit (Day 6, from the .venv), git, and Node.js (Day 6 Lab 16)."""
+    import shutil
+    import subprocess
+    for name, needed_for in [("ruff", "Day 6 Lab 17"), ("bandit", "Day 6 Lab 18"), ("git", "Days 4-6"), ("node", "Day 6 Lab 16 Task 6")]:
+        exe = shutil.which(name)
+        if not exe:
+            status = WARN if name == "node" else FAIL
+            report(status, f"{name:<32} not found on PATH (needed for {needed_for})")
+            continue
+        try:
+            out = subprocess.run([exe, "--version"], capture_output=True, text=True, timeout=30).stdout.strip().splitlines()
+            report(OK, f"{name:<32} {out[0] if out else ''}")
+        except Exception as e:
+            report(WARN, f"{name:<32} found but '--version' failed: {e}")
 
 
 def check_hardware():
@@ -220,6 +239,7 @@ def main():
     print("=" * 64)
     check_python()
     check_packages()
+    check_tools()
     check_hardware()
     check_network()
     check_env_file(args.azure)
