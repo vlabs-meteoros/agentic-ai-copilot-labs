@@ -293,7 +293,7 @@ In this exercise, you will configure the generative AI settings and test how the
 
 2. Verify that **Orchestration** is set to **Yes - Responses will be dynamic, using available tools and knowledge as appropriate**.
 
-3. In the **Knowledge** section, set **Allow ungrounded responses** to **Off**.
+3. Scroll down to find the **Knowledge** section, there set **Allow ungrounded responses** to **Off**.
 
 4. Set **Use information from the Web** to **Off**.
 
