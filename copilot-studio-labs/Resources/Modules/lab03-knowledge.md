@@ -335,7 +335,7 @@ Start a new test session and enter:
 According to the IRS, what is the standard deduction for incidental expenses?
 ```
 
-You will get a response indicating that the requested information **could not be determined from the available sources**, because **Use information from the Web** is turned **Off**.
+You will get a response similar to **could not be determined from the available sources**, because **Use information from the Web** is turned **Off**.
 
 ### Task 4.2 – Configure generative answers node
 
