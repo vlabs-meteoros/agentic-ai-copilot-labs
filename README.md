@@ -57,50 +57,66 @@ If activation is blocked, run `Set-ExecutionPolicy -Scope Process Bypass` in tha
 
 ```
 agentic-ai-copilot-labs/
-├── README.md               <- you are here
+├── README.md                       <-- you are here
 ├── requirements.txt
-├── .env.example            <- copied to .env by setup (holds your keys and passwords - never commit .env)
+├── .env.example                    <-- copied to .env by setup (never commit .env)
+│
 ├── setup/
-│   ├── setup-windows.ps1   <- one-time VM setup
-│   ├── verify_env.py       <- environment check (--azure: Azure resource, --neo4j: your AuraDB instance)
-│   ├── prefetch_assets.py  <- pre-download models and datasets
+│   ├── setup-windows.ps1           <-- one-time VM setup
+│   ├── verify_env.py               <-- environment check (--azure, --neo4j)
+│   ├── prefetch_assets.py          <-- pre-download models and datasets
 │   └── requirements-tested.txt
+│
+├── copilot-studio-labs/
+│   ├── Resources/
+│   │   └── Modules/
+│   │       ├── lab00-ILT-setup.md
+│   │       ├── lab01-create-agents.md
+│   │       └── lab02-manage-topics.md
+│   └── media/
+│
 ├── day1/
 │   ├── lab00-environment-setup/
 │   ├── lab01-azure-ai-services/
 │   ├── lab02-transfer-learning/
 │   └── lab03-datasets-tokenizers/
+│
 ├── day2/
-│   ├── data/                   <- Kaveri Systems helpdesk knowledge base (Labs 5-6, 9)
+│   ├── data/                       <-- Kaveri Systems helpdesk knowledge base (Labs 5-6, 9)
 │   ├── lab04-hf-hub-cli/
 │   ├── lab05-llm-usage/
-│   ├── lab06-prompt-variations/
+│   └── lab06-prompt-variations/
+│
 ├── day3/
-│   ├── lab07-copilot-in-vscode/ 
+│   ├── lab07-copilot-in-vscode/
 │   ├── lab08-prompting-patterns/
 │   └── lab09-mcp-server/
+│
 ├── day4/
-│   ├── start-kaveridesk.ps1    <- copies the KaveriDesk app to Desktop\kaveridesk (Labs 10 and 12)
-│   ├── kaveridesk/             <- the KaveriDesk helpdesk app (starting point, don't edit here)
+│   ├── start-kaveridesk.ps1        <-- copies KaveriDesk to Desktop\kaveridesk (Labs 10, 12)
+│   ├── kaveridesk/                 <-- KaveriDesk helpdesk app (starting point, don't edit here)
 │   ├── lab10-analyze-document-code/
-│   ├── lab11-voice-agent/ 
-│   └── lab12-agent-mode/ 
+│   ├── lab11-voice-agent/
+│   └── lab12-agent-mode/
+│
 ├── day5/
-│   ├── start-kavericlaims.ps1  <- copies the KaveriClaims app to Desktop\kavericlaims (Labs 13 and 14)
-│   ├── kavericlaims/           <- the KaveriClaims expense-claims app (starting point, don't edit here)
+│   ├── start-kavericlaims.ps1      <-- copies KaveriClaims to Desktop\kavericlaims (Labs 13, 14)
+│   ├── kavericlaims/               <-- KaveriClaims expense-claims app (starting point, don't edit here)
 │   ├── lab13-context-multimodal/
 │   └── lab14-unit-tests/
+│
 ├── day6/
-│   ├── start-kavericlaims-day6.ps1  <- copies KaveriClaims 2.0 to Desktop\kavericlaims-day6 (Labs 15 and 16)
-│   ├── kavericlaims/                <- KaveriClaims 2.0 (starting point, don't edit here)
+│   ├── start-kavericlaims-day6.ps1 <-- copies KaveriClaims 2.0 to Desktop\kavericlaims-day6 (Labs 15, 16)
+│   ├── kavericlaims/               <-- KaveriClaims 2.0 (starting point, don't edit here)
 │   ├── lab15-consolidate-refactor/
 │   └── lab16-debug-tdd-sca/
-├── day7/
-│   ├── start-kaverirooms.ps1   <- copies the KaveriRooms app (JavaScript) to Desktop\kaverirooms (Lab 19)
-│   ├── start-kaveriassets.ps1  <- copies the KaveriAssets app (Python) to Desktop\kaveriassets (Labs 20-21)
-│   ├── kaverirooms/            <- meeting-room booking: Node.js, no packages (starting point, don't edit here)
-│   ├── kaveriassets/           <- the IT asset register (starting point, don't edit here)
-│   ├── lab19-spec-kit/
-│   ├── lab20-add-features/
-│   └── lab21-ai-agent/
+│
+└── day7/
+    ├── start-kaverirooms.ps1       <-- copies KaveriRooms (JavaScript) to Desktop\kaverirooms (Lab 19)
+    ├── start-kaveriassets.ps1      <-- copies KaveriAssets (Python) to Desktop\kaveriassets (Labs 20-21)
+    ├── kaverirooms/                <-- meeting-room booking: Node.js, no packages (starting point)
+    ├── kaveriassets/               <-- IT asset register (starting point, don't edit here)
+    ├── lab19-spec-kit/              
+    ├── lab20-add-features/
+    └── lab21-ai-agent/
 ```
