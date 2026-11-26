@@ -185,7 +185,7 @@ In this exercise, you will add knowledge sources to the agent to ground the agen
 
 1. Select **Dataverse**.
 
-1. Search for and select the *Expenses* table you created in Exercise 2
+1. Search for the **Expenses Claim** table you created in *Exercise 2* using the search bar.
 
    ![Screenshot of adding the Expenses table in Dataverse as knowledge to your agent in Copilot Studio.](../../media/knowledge-add-dataverse.png)
 
