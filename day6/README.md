@@ -36,7 +36,7 @@ If setup printed **[WARN] Node.js could not be installed**, tell your trainer be
 | # | Lab | Topic it supports | Time | Needs |
 |---|---|---|---|---|
 | 15 | [Consolidate Duplicate Code, Refactor a Large Function, and Migrate to JavaScript](lab15-consolidate-refactor/README.md) | Debugging (duplicate code), Code Understanding and Migration | 50 min | Copilot, Node.js for Task 6 |
-| 16 | Debugging, TDD and BDD, and Static Analysis | Debugging | 60 min | Copilot, your `kavericlaims-day6` copy from Lab 15 |
+| 16 | [Debugging, TDD and BDD, and Static Analysis](lab16-debug-tdd-sca/README.md) | Debugging | 60 min | Copilot, your `kavericlaims-day6` copy from Lab 15 |
 
 ## How the labs connect
 
