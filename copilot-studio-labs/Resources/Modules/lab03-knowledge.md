@@ -451,6 +451,16 @@ You will get a response similar to **could not be determined from the available 
    
 1. Try a few more questions and view the responses from your agent. It will have limited functionality, but should be able to provide relevant answers to questions about expense claims and policies.
 
+Use an **IMPORTANT** callout instead:
+
+> [!IMPORTANT]
+> If you see the message **"You may not have access to this agent due to authentication settings. Please contact the owner to use this demo."**, follow these steps:
+>
+> 1. Ensure **No authentication** is selected in the Authentication settings.
+> 2. Close the Settings panel.
+> 3. Select **Publish**, then select **Publish** again to confirm.
+> 4. Open the **Demo website** and test your agent. It should now work correctly.
+
 ## Summary
 
 In this lab, you added knowledge sources to an agent and explored how generative AI settings affect when and how the knowledge sources are used to generate responses to prompts.
