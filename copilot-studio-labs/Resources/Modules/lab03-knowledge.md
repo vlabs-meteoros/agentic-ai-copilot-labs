@@ -72,7 +72,7 @@ In this exercise, you will create a Dataverse table that will be used as a knowl
 
    ![Dataverse Tables in the Maker portal.](../../media/dataverse-tables.png)
 
-1. Select the **Get started with Copilot** tile click **Create**.
+1. Select the **Get started with Copilot** tile, then select **Create**. Wait for 1–2 minutes while your developer environment is being set up.
 
 1. **In the Get started with Copilot dialog**, select the **Horizontal Sliders Icon ☷**, and then select **One table**. After selecting **One table**, click anywhere outside the dialog to return to the **Tables** page. 
 
