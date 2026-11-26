@@ -409,13 +409,19 @@ You will get a response similar to **could not be determined from the available 
 
    `What is the federal per diem rate?`
 
-1. The knowledge sources may not provide a direct answer. In such cases, the agent may use generative answers to search the web and provide a response. If no suitable grounded or generative response is available, the conversation may route to the Fallback topic.**The information may vary from person to person, so the results shown in the image below may be different for you**.
-
-   ![Screenshot of the conversation using the Fallback topic.](../../media/knowledge-conversation-5.png)
+1. The knowledge sources may not provide a direct answer. In such cases, the agent may use generative answers to search the web and provide a response. If no suitable grounded or generative response is available, the conversation may route to the Fallback topic.**The information may vary from person to person** .
 
 ## Exercise 5 - Publish the agent
 
 1. On the agent page, select **Publish** and select **Publish** again to confirm.
+
+1. Select **Settings** next to Publish.
+   
+1. Click **Security** then click **Authentication**.
+   
+1. Ensure **No authentication** is selected. If it is not selected, select it. Then click **Save** and click **Save** again to confirm.
+
+1. Select the **X** icon below the profile icon to close the Settings panel.
 
 1. Select the **Channels** tab.
 
