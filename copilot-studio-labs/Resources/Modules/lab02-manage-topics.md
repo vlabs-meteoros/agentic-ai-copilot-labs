@@ -142,13 +142,16 @@ In this exercise, you will use Copilot to create a topic from a description. Thi
 
 ### Task 3.2 – Edit nodes using natural language
 
+> [!TIP]
+> **For the upcoming tasks** You will be working on this canvas, and scrolling down to find and select nodes may become difficult. Use the **Hand tool** at the bottom-left, just below the **Selection tool**, to move around the canvas easily. It will make navigation much easier.
+
 1. If the **Test your agent** panel is open, close the panel.
 
 1. If the **Edit with Copilot** panel is not shown on the right side of the **Customer Details** pane, select the **Copilot** icon in the upper part of the authoring canvas.
 
    ![Screenshot of the Edit with Copilot icon.](../../media/edit-with-copilot.png)
 
-1. Select the second **Question** node **What is your email address?**
+1. Scroll down a little and select the second **Question** node, **What is your email address?**
 
    ![Screenshot of the Edit with Copilot icon.](../../media/copilot-email-address-node.png)
 
@@ -177,9 +180,7 @@ In addition to modifying existing nodes, you can use Copilot to add new ones.
 
    `Summarize the information collected in an adaptive card`
 
-1. Select **Update**.
-
-   A message node with an Adaptive Card is added to the end of the topic.
+1. Select **Update**. A message node with an Adaptive Card is added to the end of the topic and you can find it at the bottom.
 
    ![Screenshot of the message node with an Adaptive Card.](../../media/message-node-adaptive-card.png)
 
@@ -222,23 +223,31 @@ In addition to modifying existing nodes, you can use Copilot to add new ones.
    }
    ```
 
+1. Click **Save**
+
 ### Task 3.4 – Add a question node using natural language
 
-1. Make sure that no node is selected by selecting the empty space in the authoring canvas.
+1. Below the Summary card, select the **+ (Add node)** icon, then select **Ask a question**.
 
-1. Select the **Copilot** icon to reopen the **Edit with Copilot** pane.
+2. In the question node, enter the following message:
 
-1. In the **What do you want to do?** field, enter the following text:
+   `Are these details correct?`
 
-   `Add a new multiple choice question to prompt the user if the details are correct with two options Yes or No`
+3. If the **Copilot** pane is closed, select the **Copilot** icon again to reopen the **Edit with Copilot** pane.
 
-1. Select **Update**.
+4. In the **What do you want to do?** field, enter the following text:
 
-1. A new question node is added to the end of the topic with options for the user to select.
+   `Update the existing basic question node with the message "Are these details correct?" Change its response type to "Multiple choice options" and add two options: "Yes" and "No". Do not create a new question node or duplicate any existing nodes.`
+   
+5. Select **Update**.
 
-   ![Screenshot of the new question node with yes and no options.](../../media/new-question-node.png)
+6. The existing question node is updated to a multiple choice question with **Yes** and **No** options.
 
-1. Select **Save**.
+7. Under **Save user response as**, select **Var1**. You will see the **Variable name** field. Replace `Var1` with `DetailsCorrect`.
+
+   ![Screenshot of the updated question node with Yes and No options.](../../media/new-question-node.png)
+   
+8. Select **Save**.
 
 ## Exercise 4 - Variable scope
 
@@ -246,13 +255,12 @@ Enable variables to be accessed by other topics.
 
 ### Task 4.1 - Configure the scope of the variables
 
-1. Select the **Topics** tab.
+> [!TIP]
+> If you have left the **Topics** tab, select it again. Open the **Customer Details** topic. If multiple topics with the same name appear, select the one with the most recent **Last modified** time.
+   
+1. Select **Variables{X}** in the top bar to open the **Variables** pane.
 
-1. Select the **Customer Details** topic. If multiple **Customer Details** topics are listed, select the one with the most recent **Last modified** time.
-
-1. Select **Variables** in the top bar to open the **Variables** pane.
-
-1. Select and expand **Topic** variables.
+1. Select **Topic (3)** to expand it.
 
 1. Select the right-hand check boxes for the three topic variables. This makes the variables available across other topics in the agent.
 
@@ -270,7 +278,7 @@ In this exercise, you will create the **Estimate Repair** topic, add nodes, and 
 
 1. Select **+ Add a topic** and select **From blank**.
 
-1. Select the **Details** icon to open the **Topic details** pane (you may need to select **More** \> **Details**).
+1. Select the **Details** icon to open the **Topic details** pane. If you don't see it, select **More > Details**.
 
 1. In the **Name** field, enter the following text:
 
@@ -295,7 +303,7 @@ In this exercise, you will create the **Estimate Repair** topic, add nodes, and 
 
 ### Task 5.3 - Add a message node
 
-1. Select the **+** icon under the Trigger node and select **Send a message**.
+1. Select the **+ icon** under the Trigger node and select **Send a message**.
 
    ![Screenshot of adding a node.](../../media/add-message-node.png)
 
@@ -307,7 +315,7 @@ In this exercise, you will create the **Estimate Repair** topic, add nodes, and 
 
 ### Task 5.4 - Route to the Customer Details topic
 
-1. Select the **+** icon under the **Message** node
+1. Select the **+ icon** under the **Message** node
 
 1. Select **Topic management** > **Go to another topic** > **Customer Details**.
 
@@ -320,7 +328,7 @@ In this exercise, you will create the **Estimate Repair** topic, add nodes, and 
 
 ### Task 5.5 - Add condition node
 
-1. Select the **+** icon under the **Topic** node and select **Add a condition**.
+1. Select the **+ icon** under the **Topic** node and select **Add a condition**.
 
 1. In the **Condition** node, select the **Select a variable >** then  choose **DetailsCorrect** variable.
 
@@ -334,21 +342,21 @@ In this exercise, you will create the **Estimate Repair** topic, add nodes, and 
 
 ### Task 5.6 - Add question nodes
 
-1. Select the **+** icon under the left **Condition** node and select **Ask a question**.
+1. Select the **+ icon** under the left **Condition** node and select **Ask a question**.
 
 1. In the **Enter a message** field, enter the following text:
 
    `What date and time would you like to book the repair estimate?`
 
-1. Select **Date and time** for **Identify**. If you have difficulty finding it, use the **search box** in the **brackets** to search for it.
+1. Click **Identify** and use the search box to find **Date and time**, then select it.
 
    ![Screenshot of Date and Time.](../../media/DateandTime.png)
 
-1. Select the variable in **Save user response as** and enter **`VisitDateTime`** for **Variable name**
+1. Select the **Var1** in **Save user response as** and replace **Var1** by **`VisitDateTime`** inside **Variable properties** panel
 
    ![Screenshot of Var Name.](../../media/VarName.png)
 
-1. Select the **+** icon under the left **Question** node and select **Send a message**.
+1. Select the **+ icon** under the left **Question** node and select **Send a message**.
 
 1. In the **Enter a message** field, enter the following text:
 
