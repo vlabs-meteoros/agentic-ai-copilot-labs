@@ -3,6 +3,7 @@ Check that a lab machine is ready for the labs.
 
     python setup\\verify_env.py                    # packages, hardware, network
     python setup\\verify_env.py --azure            # + live calls to the shared Azure AI resource (Lab 1, Lab 6, Labs 11 and 13)
+    python setup\\verify_env.py --mongo            # + connect to the shared MongoDB Atlas cluster (Day 8 Lab 23)
 
 Exit code 0 = ready, 1 = something needs fixing.
 """
@@ -54,7 +55,10 @@ def check_packages():
             # Day 5
             "pytest", "pytest_cov",
             # Day 6
-            "pytest_bdd", "bandit"]
+            "pytest_bdd", "bandit",
+            # Day 8
+            "redis", "fakeredis", "httpx", "pymongo", "langgraph.checkpoint.mongodb", "mem0"]
+    # Day 7: Spec Kit's CLI (specify-cli) is checked as a tool in check_tools(); it needs Python 3.11+
     for name in pkgs:
         try:
             mod = importlib.import_module(name)
@@ -69,20 +73,60 @@ def check_packages():
 
 
 def check_tools():
-    """Command-line tools the labs call: ruff and bandit (Day 6, from the .venv), git, and Node.js (Day 6 Lab 16)."""
+    """Command-line tools the labs call: ruff and bandit (Day 6) and specify (Day 7) from the .venv, git, and Node.js (Days 6-7)."""
+    import re
     import shutil
     import subprocess
-    for name, needed_for in [("ruff", "Day 6 Lab 17"), ("bandit", "Day 6 Lab 18"), ("git", "Days 4-6"), ("node", "Day 6 Lab 16 Task 6")]:
-        exe = shutil.which(name)
+    # Look in the .venv's Scripts (or bin) folder too, so this works when setup runs it without activating the .venv,
+    # and in .speckit-venv, where setup puts Spec Kit when the .venv is Python 3.10
+    speckit_bin = ROOT / ".speckit-venv" / ("Scripts" if os.name == "nt" else "bin")
+    search_path = os.pathsep.join([str(Path(sys.executable).parent), str(speckit_bin), os.environ.get("PATH", "")])
+    tools = [("ruff", "Day 6 Lab 17"), ("bandit", "Day 6 Lab 18"), ("specify", "Day 7 Lab 19 (Spec Kit)"),
+             ("git", "Days 4-7"), ("node", "Day 6 Lab 16 Task 6 and Day 7 Lab 19")]
+    for name, needed_for in tools:
+        exe = shutil.which(name, path=search_path)
         if not exe:
+            if name == "specify" and sys.version_info < (3, 11):
+                report(WARN, f"{name:<32} not installed: it needs Python 3.11+ and this .venv is {platform.python_version()}. "
+                             "Re-run setup\\setup-windows.ps1 (it puts Spec Kit in .speckit-venv), or ask your trainer: Day 7 Lab 19")
+                continue
             status = WARN if name == "node" else FAIL
-            report(status, f"{name:<32} not found on PATH (needed for {needed_for})")
+            hint = ": re-run setup\\setup-windows.ps1, then open a NEW terminal" if name in ("node", "specify") else ""
+            report(status, f"{name:<32} not found on PATH (needed for {needed_for}){hint}")
             continue
         try:
-            out = subprocess.run([exe, "--version"], capture_output=True, text=True, timeout=30).stdout.strip().splitlines()
-            report(OK, f"{name:<32} {out[0] if out else ''}")
+            out = subprocess.run([exe, "--version"], capture_output=True, text=True, timeout=60).stdout.strip().splitlines()
+            version = out[0] if out else ""
+            if name == "node":
+                major = re.match(r"v(\d+)", version)
+                if major and int(major.group(1)) < 18:
+                    report(FAIL, f"{name:<32} {version} is too old: the labs need Node.js 18 or later. Re-run setup\\setup-windows.ps1")
+                    continue
+            report(OK, f"{name:<32} {version}")
         except Exception as e:
             report(WARN, f"{name:<32} found but '--version' failed: {e}")
+
+
+def check_garnet():
+    """Day 8 Lab 22: Garnet installed by setup (Windows), and whether it's running now."""
+    if os.name == "nt":
+        local = Path(os.environ.get("LOCALAPPDATA", ""))
+        exes = sorted((local / "Programs" / "garnet").glob("*/net10.0/GarnetServer.exe"))
+        runtimes = list((local / "Programs" / "dotnet10" / "shared" / "Microsoft.NETCore.App").glob("10.*")) + \
+            list((Path(os.environ.get("ProgramFiles", r"C:\Program Files")) / "dotnet" / "shared" / "Microsoft.NETCore.App").glob("10.*"))
+        if not exes:
+            report(WARN, f"{'Garnet':<32} not installed (Day 8 Lab 22): re-run setup\\setup-windows.ps1")
+            return
+        report(OK if runtimes else WARN, f"{'Garnet':<32} {exes[-1].parents[1].name}" + ("" if runtimes else ", but no .NET 10 runtime: re-run setup"))
+    try:
+        import redis
+        from dotenv import dotenv_values
+
+        url = (dotenv_values(ROOT / ".env") if (ROOT / ".env").exists() else {}).get("REDIS_URL") or "redis://localhost:6379/0"
+        info = redis.Redis.from_url(url, socket_connect_timeout=2).info("server")
+        report(OK, f"{'Garnet/Redis server':<32} running at {url} (Garnet {info.get('garnet_version', '?')})")
+    except Exception:
+        report(OK, f"{'Garnet/Redis server':<32} not running now (start it in Lab 22: day8\\start-garnet.ps1)")
 
 
 def check_hardware():
@@ -228,10 +272,33 @@ def check_neo4j():
         print("       Is the instance Running (not paused) in console.neo4j.io? Are URI/user/password copied exactly?")
 
 
+def check_mongo():
+    """Day 8 Lab 23: the shared MongoDB Atlas cluster in MONGODB_URI, and the database this participant will use."""
+    from dotenv import dotenv_values
+    vals = dotenv_values(ROOT / ".env") if (ROOT / ".env").exists() else {}
+    uri = vals.get("MONGODB_URI") or ""
+    if not uri or "<" in uri:
+        report(WARN, "MONGODB_URI not set in .env (Day 8 Lab 23, Task 1: your trainer gives you the value)")
+        return
+    import re
+    import socket
+    who = vals.get("PARTICIPANT_ID") or ""
+    who = re.sub(r"[^a-z0-9]+", "_", (who if who and "<" not in who else os.environ.get("COMPUTERNAME") or socket.gethostname()).lower()).strip("_")[:30]
+    try:
+        from pymongo import MongoClient
+        client = MongoClient(uri, appname="verify_env", serverSelectionTimeoutMS=10000)
+        version = client.server_info()["version"]
+        report(OK, f"MongoDB connection: OK (MongoDB {version}); your checkpoints go to database kavericode_{who}")
+    except Exception as e:
+        report(FAIL, f"MongoDB connection failed: {type(e).__name__}: {str(e)[:200]}")
+        print("       Is MONGODB_URI copied exactly? Does the cluster's Network Access allow this VM? (ask your trainer)")
+
+
 def main():
     p = argparse.ArgumentParser()
     p.add_argument("--azure", action="store_true", help="also make live calls to the Azure resource")
     p.add_argument("--neo4j", action="store_true", help="also connect to the Neo4j instance in .env")
+    p.add_argument("--mongo", action="store_true", help="also connect to the MongoDB cluster in .env (Day 8)")
     args = p.parse_args()
 
     print("=" * 64)
@@ -240,11 +307,14 @@ def main():
     check_python()
     check_packages()
     check_tools()
+    check_garnet()
     check_hardware()
     check_network()
     check_env_file(args.azure)
     if args.neo4j:
         check_neo4j()
+    if args.mongo:
+        check_mongo()
     print("=" * 64)
     if failures:
         print(f" {failures} problem(s) found - fix the [FAIL] lines above.")

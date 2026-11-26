@@ -11,7 +11,8 @@ All labs run on the provided **Windows VM in VS Code**.
 | **4** | Prompt Engineering for code, Developer Productivity (voice AI), Agent Mode | [Day 4 labs](day4/README.md) (start with *Before you start*) |
 | **5** | Copilot Chat & Agent Mode on legacy code (context, multi-modal), refactoring, unit tests | [Day 5 labs](day5/README.md) (start with *Before you start*) |
 | **6** | Debugging (TDD/BDD, static analysis, security), Code Understanding and Migration, Code Review | [Day 6 labs](day6/README.md) (start with *Before you start*) |
-| 7-10 | *coming soon* | |
+| **7** | GitHub Copilot with JavaScript (Spec Kit) and Python, GitHub Copilot Agents | [Day 7 labs](day7/README.md) (start with *Before you start*) |
+| 8-10 | *coming soon* | |
 
 ---
 
@@ -89,9 +90,17 @@ agentic-ai-copilot-labs/
 │   ├── kavericlaims/           <- the KaveriClaims expense-claims app (starting point, don't edit here)
 │   ├── lab13-context-multimodal/
 │   └── lab14-unit-tests/
-└── day6/
-    ├── start-kavericlaims-day6.ps1  <- copies KaveriClaims 2.0 to Desktop\kavericlaims-day6 (Labs 15 and 16)
-    ├── kavericlaims/                <- KaveriClaims 2.0 (starting point, don't edit here)
-    ├── lab15-consolidate-refactor/
-    └── lab16-debug-tdd-sca/
+├── day6/
+│   ├── start-kavericlaims-day6.ps1  <- copies KaveriClaims 2.0 to Desktop\kavericlaims-day6 (Labs 15 and 16)
+│   ├── kavericlaims/                <- KaveriClaims 2.0 (starting point, don't edit here)
+│   ├── lab15-consolidate-refactor/
+│   └── lab16-debug-tdd-sca/
+├── day7/
+│   ├── start-kaverirooms.ps1   <- copies the KaveriRooms app (JavaScript) to Desktop\kaverirooms (Lab 19)
+│   ├── start-kaveriassets.ps1  <- copies the KaveriAssets app (Python) to Desktop\kaveriassets (Labs 20-21)
+│   ├── kaverirooms/            <- meeting-room booking: Node.js, no packages (starting point, don't edit here)
+│   ├── kaveriassets/           <- the IT asset register (starting point, don't edit here)
+│   ├── lab19-spec-kit/
+│   ├── lab20-add-features/
+│   └── lab21-ai-agent/
 ```

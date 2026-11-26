@@ -1,0 +1,8 @@
+[
+  { "id": "kabini", "name": "Kabini", "floor": 1, "capacity": 4, "equipment": ["TV"] },
+  { "id": "hemavathi", "name": "Hemavathi", "floor": 1, "capacity": 6, "equipment": ["TV", "Whiteboard"] },
+  { "id": "shimsha", "name": "Shimsha", "floor": 2, "capacity": 8, "equipment": ["Projector", "Whiteboard"] },
+  { "id": "kapila", "name": "Kapila", "floor": 2, "capacity": 10, "equipment": ["Video conference", "Whiteboard"] },
+  { "id": "tunga", "name": "Tunga", "floor": 3, "capacity": 12, "equipment": ["Video conference", "Projector"] },
+  { "id": "cauvery", "name": "Cauvery Hall", "floor": 3, "capacity": 40, "equipment": ["Projector", "Microphones"] }
+]

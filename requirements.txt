@@ -1,5 +1,5 @@
-# Agentic AI with Copilot - lab dependencies (Days 1-6)
-# Day 1 tested with Python 3.12/3.13 on 2026-11-15; Day 2 on 2026-11-16; Day 3 on 2026-11-17; Day 4 on 2026-11-18; Day 5 on 2026-11-19; Day 6 on 2026-11-23. Exact tested versions: setup/requirements-tested.txt
+# Agentic AI with Copilot - lab dependencies (Days 1-8)
+# Day 1 tested with Python 3.12/3.13 on 2026-11-15; Day 2 on 2026-11-16; Day 3 on 2026-11-17; Day 4 on 2026-11-18; Day 5 on 2026-11-19; Day 6 on 2026-11-23; Day 7 on 2026-11-23; Day 8 on 2026-11-24. Exact tested versions: setup/requirements-tested.txt
 #
 # On Windows, `pip install torch` from PyPI installs the CPU build.
 # For an NVIDIA GPU run setup-windows.ps1 with -Cuda.
@@ -52,10 +52,23 @@ uvicorn>=0.30                 # Lab 13: runs the API
 pytest>=8.3
 pytest-cov>=6.0               # Lab 15: python -m pytest --cov
 
-# --- Day 6 --- 
-pytest-bdd>=8.1               
-ruff>=0.15                    
-bandit>=1.8                   
+# --- Day 6: BDD and static code analysis for KaveriClaims 2.0 (Labs 17-18); Lab 16 Task 6 also needs Node.js 18+
+pytest-bdd>=8.1               # Lab 17: Gherkin scenarios as pytest tests
+ruff>=0.15                    # Lab 17: lint (style and likely bugs), rules in kavericlaims-day6\ruff.toml
+bandit>=1.8                   # Lab 18: security static analysis
+
+# --- Day 7: GitHub Spec Kit for Lab 19 (the `specify` command); Lab 19 also needs Node.js 18+ (setup installs it if missing).
+# Lab 21 reuses openai + python-dotenv. specify-cli needs Python 3.11+, so a 3.10 .venv skips it here and setup installs it in .speckit-venv instead.
+specify-cli>=1.4,<2 ; python_version >= "3.11"
+
+# --- Day 8: queue-based RAG on Garnet (Lab 22) and a coding assistant with memory (Lab 23)
+# Lab 22 reuses fastapi, uvicorn, sentence-transformers and openai; Garnet itself is installed by setup-windows.ps1 (not a Python package)
+redis>=6.0                    # Lab 22: the Redis client (talks to Garnet), with asyncio support for the API
+fakeredis>=2.30               # Lab 22: an in-memory Redis for the tests
+httpx>=0.27                   # Lab 22: the load test and FastAPI's TestClient (also comes with openai)
+pymongo>=4.10                 # Lab 23: MongoDB driver
+langgraph-checkpoint-mongodb>=0.3   # Lab 23: LangGraph checkpoints in MongoDB (MongoDBSaver)
+mem0ai>=2.2,<3                # Lab 23: long-term memory (semantic and episodic); uses qdrant-client in local mode
 
 # --- Notebooks in VS Code
 ipykernel>=6.29

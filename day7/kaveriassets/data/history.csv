@@ -1,0 +1,13 @@
+date,asset_id,action,emp_id
+2023-12-18,KA-L001,assigned,E01
+2024-01-22,KA-L002,assigned,E02
+2023-11-13,KA-L003,assigned,E04
+2024-02-01,KA-M001,assigned,E01
+2024-12-12,KA-L010,assigned,E05
+2025-01-17,KA-M003,assigned,E05
+2024-11-25,KA-P001,assigned,E06
+2025-01-08,KA-P003,assigned,E09
+2024-03-04,KA-L011,assigned,E03
+2025-10-03,KA-L012,assigned,E09
+2025-12-02,KA-H001,assigned,E02
+2026-11-18,KA-L004,repair,

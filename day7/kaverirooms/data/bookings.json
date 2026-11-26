@@ -1,0 +1,11 @@
+[
+  { "id": "B-1001", "roomId": "kabini", "date": "2026-12-07", "start": "09:00", "end": "09:30", "title": "Payments squad stand-up", "organiser": "Ravi Kumar", "attendees": 4 },
+  { "id": "B-1002", "roomId": "cauvery", "date": "2026-12-07", "start": "10:00", "end": "12:00", "title": "Mysuru all-hands", "organiser": "Deepa Rao", "attendees": 35 },
+  { "id": "B-1003", "roomId": "hemavathi", "date": "2026-12-15", "start": "14:00", "end": "15:00", "title": "Quarterly review", "organiser": "Arjun Menon", "attendees": 5 },
+  { "id": "B-1004", "roomId": "kapila", "date": "2026-12-08", "start": "11:00", "end": "12:30", "title": "Client call: Nilgiri Foods", "organiser": "Priya Nair", "attendees": 6 },
+  { "id": "B-1005", "roomId": "shimsha", "date": "2026-12-08", "start": "14:00", "end": "16:00", "title": "Sprint planning", "organiser": "Kavya Shetty", "attendees": 8 },
+  { "id": "B-1006", "roomId": "kabini", "date": "2026-12-08", "start": "09:00", "end": "09:30", "title": "Payments squad stand-up", "organiser": "Ravi Kumar", "attendees": 4 },
+  { "id": "B-1007", "roomId": "tunga", "date": "2026-12-08", "start": "16:30", "end": "17:30", "title": "Interview: backend engineer", "organiser": "Farhan Sheikh", "attendees": 3 },
+  { "id": "B-1008", "roomId": "hemavathi", "date": "2026-12-09", "start": "10:00", "end": "11:00", "title": "Design review: KaveriRooms 2", "organiser": "Ananya Iyer", "attendees": 6 },
+  { "id": "B-1009", "roomId": "kabini", "date": "2026-12-11", "start": "15:00", "end": "16:00", "title": "1:1 Rahul / Sneha", "organiser": "Sneha Patil", "attendees": 2 }
+]

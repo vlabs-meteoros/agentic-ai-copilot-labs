@@ -1,0 +1,26 @@
+* { box-sizing: border-box; }
+body { margin: 0; font-family: "Segoe UI", system-ui, sans-serif; color: #1f2933; background: #f5f7f9; }
+header { display: flex; justify-content: space-between; align-items: center; padding: 12px 24px; background: #0f4c5c; color: #fff; }
+header h1 { margin: 0; font-size: 1.4rem; }
+header h1 span { font-weight: 400; font-size: 0.9rem; opacity: 0.8; margin-left: 8px; }
+nav { display: flex; gap: 6px; }
+nav button, nav input { font: inherit; padding: 4px 8px; }
+main { display: grid; grid-template-columns: 1fr 300px; gap: 24px; padding: 16px 24px; }
+h2 { font-size: 1.1rem; margin: 8px 0 12px; }
+.grid-wrap { overflow-x: auto; background: #fff; border: 1px solid #d9e2ec; }
+table { border-collapse: collapse; width: 100%; table-layout: fixed; min-width: 900px; }
+th, td { border: 1px solid #e4e7eb; height: 44px; font-size: 0.75rem; padding: 2px; }
+th.room { width: 130px; text-align: left; padding-left: 8px; font-size: 0.85rem; }
+th.room small { display: block; color: #616e7c; font-weight: 400; }
+thead th { height: 28px; font-weight: 400; color: #616e7c; }
+td.booking { background: #c6f7e2; border: 1px solid #3ebd93; cursor: pointer; overflow: hidden; white-space: nowrap; text-overflow: ellipsis; }
+td.booking:hover { background: #8eedc7; }
+.closed { background: #fff3c4; border: 1px solid #f0b429; padding: 8px 12px; }
+.hint { color: #616e7c; font-size: 0.85rem; }
+form { display: grid; gap: 10px; background: #fff; border: 1px solid #d9e2ec; padding: 16px; }
+label { display: grid; gap: 4px; font-size: 0.85rem; }
+input, select, button { font: inherit; padding: 6px 8px; }
+form button { background: #0f4c5c; color: #fff; border: 0; cursor: pointer; }
+#message { min-height: 2em; font-size: 0.9rem; }
+#message.error { color: #ba2525; }
+#message.ok { color: #0c6b58; }
