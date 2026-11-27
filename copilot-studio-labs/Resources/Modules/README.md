@@ -1,4 +1,18 @@
 # Copilot Studio Labs
 
-1. Start with [Lab 00 - ILT Setup](lab00-ILT-setup.md).
-2. After completing the setup, proceed to [Lab 01 - Create Agents](lab01-create-agents.md).
+Start with **Lab 00 - ILT Setup**. It creates the environment and solution required for the remaining labs.
+
+| # | Lab | Topic it supports | Time | Needs |
+|---|---|---|---|---|
+| 00 | [ILT Setup](lab00-ILT-setup.md) | Power Platform environment, Dataverse, Copilot Studio, and solutions | 25 min | Internet |
+| 01 | [Create Agents](lab01-create-agents.md) | Agent creation, instructions, knowledge sources, and publishing | 55 min | Copilot Studio access and the environment created in Lab 00 |
+
+## How the labs connect
+
+```text
+Lab 00  Create a Power Platform environment and solution
+        -> Prepare the workspace for agent development
+
+Lab 01  Create and configure agents
+        -> Define agent behavior, add knowledge, and publish
+```
