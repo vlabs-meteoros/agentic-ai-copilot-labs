@@ -1,4 +1,4 @@
-# Lab 15: Consolidate Duplicate Code, Refactor a Large Function, and Migrate to JavaScript
+# Lab 16: Consolidate Duplicate Code, Refactor a Large Function, and Migrate to JavaScript
 
 | | |
 |---|---|
@@ -35,7 +35,7 @@ Then the web team wants the policy rules in JavaScript for the new claim form. T
    ```
 
    The script copies `day6\kavericlaims` to `Desktop\kavericlaims-day6`, makes it a Git repository with one commit (tagged `start`),
-   turns on pytest, adds a debug configuration for Lab 16, and opens it in a **new VS Code window**. Your Day 5 copy isn't touched.
+   turns on pytest, adds a debug configuration for Lab 17, and opens it in a **new VS Code window**. Your Day 5 copy isn't touched.
 
    * If VS Code asks **Do you trust the authors of the files in this folder?**, select **Yes, I trust the authors**.
    * If no window opens, use **File > Open Folder... > Desktop\kavericlaims-day6** yourself.
@@ -72,7 +72,7 @@ From here until the end of Lab 18, **work in the `kavericlaims-day6` window**.
 3. Close the gap with a second golden test. Copy it from the labs repository and run pytest **twice**:
 
    ```powershell
-   Copy-Item "$HOME\Desktop\agentic-ai-copilot-labs\day6\lab15-consolidate-refactor\test_golden_notes.py" tests\
+   Copy-Item "$HOME\Desktop\agentic-ai-copilot-labs\day6\lab16-consolidate-refactor\test_golden_notes.py" tests\
    python -m pytest
    python -m pytest
    ```
@@ -223,8 +223,8 @@ and **the tests decide** whether it's right.
 > Things that often go wrong in a translation: rounding (Python's `round(2.5)` is `2`, JavaScript's `Math.round(2.5)` is `3`), integer division (`//`),
 > and `dict.get` defaults. That's why the next step would be shared cases for `claims.process()` too.
 
-> Stuck, or the agent went in circles? Compare with `day6\lab15-consolidate-refactor\solution\` in the labs repository. It's **one** good answer, not the only one.
-> To start Lab 16 from it: close the KaveriClaims window, then run `.\day6\start-kavericlaims-day6.ps1 -Reset -FromLab15` from the labs window.
+> Stuck, or the agent went in circles? Compare with `day6\lab16-consolidate-refactor\solution\` in the labs repository. It's **one** good answer, not the only one.
+> To start Lab 17 from it: close the KaveriClaims window, then run `.\day6\start-kavericlaims-day6.ps1 -Reset -FromLab16` from the labs window.
 
 ---
 
@@ -236,4 +236,4 @@ and **the tests decide** whether it's right.
 * A **complexity check** (`ruff --select C901`) turns "this function is too big" into a number you can track.
 * For a translation, give Copilot a **failing test** to make pass. Explain-then-translate beats translate-and-hope.
 
-Next: **[Lab 16: Debugging, TDD and BDD, and Static Analysis](../lab16-debug-tdd-sca/README.md)**.
+Next: **[Lab 17: Debugging, TDD and BDD, and Static Analysis](../lab17-debug-tdd-sca/README.md)**.

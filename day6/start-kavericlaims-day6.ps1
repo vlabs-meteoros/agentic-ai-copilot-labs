@@ -1,34 +1,36 @@
-
 <#
 .SYNOPSIS
-  Day 6 (Labs 15-16): make your own working copy of KaveriClaims 2.0 and open it in VS Code.
+  Day 6 (Labs 16-18): make your own working copy of KaveriClaims 2.0 and open it in VS Code.
 
 .DESCRIPTION
   Copies day6\kavericlaims to Desktop\kavericlaims-day6 (outside this repository, so your changes never
   block a later "git pull", and your Day 5 copy in Desktop\kavericlaims stays as it was). Makes it a Git
   repository with one starting commit tagged "start", points VS Code at this repository's .venv with pytest
-  turned on, adds a debug configuration for Lab 16, and opens it in a new VS Code window.
+  turned on, adds a debug configuration for Lab 17, and opens it in a new VS Code window.
 
   Every terminal in that window gets the labs' .venv\Scripts folder (python, ruff, bandit) and Node.js on the
-  PATH (Lab 15 Task 6). That includes the per-user Node.js that setup-windows.ps1 installs, which terminals in a
+  PATH (Lab 16 Task 6). That includes the per-user Node.js that setup-windows.ps1 installs, which terminals in a
   VS Code that was already open before setup can't see yet.
 
 .EXAMPLE
   powershell -ExecutionPolicy Bypass -File .\day6\start-kavericlaims-day6.ps1
   powershell -ExecutionPolicy Bypass -File .\day6\start-kavericlaims-day6.ps1 -Reset               # start again from a fresh copy
-  powershell -ExecutionPolicy Bypass -File .\day6\start-kavericlaims-day6.ps1 -Reset -FromLab15    # start Lab 16 from the Lab 15 reference solution
+  powershell -ExecutionPolicy Bypass -File .\day6\start-kavericlaims-day6.ps1 -Reset -FromLab16    # start Lab 17 from the Lab 16 reference solution
+  powershell -ExecutionPolicy Bypass -File .\day6\start-kavericlaims-day6.ps1 -Reset -FromLab17    # start Lab 18 from the Lab 17 reference solution
 #>
 param(
     [string]$Destination = (Join-Path ([Environment]::GetFolderPath("Desktop")) "kavericlaims-day6"),
     [switch]$Reset,
-    [switch]$FromLab15,
+    [switch]$FromLab16,
+    [switch]$FromLab17,
     [switch]$NoOpen
 )
 $ErrorActionPreference = "Stop"
 
 $RepoRoot = Split-Path -Parent $PSScriptRoot
 $Source = Join-Path $PSScriptRoot "kavericlaims"
-$Lab15Solution = Join-Path $PSScriptRoot "lab15-consolidate-refactor\solution"
+$Lab16Solution = Join-Path $PSScriptRoot "lab16-consolidate-refactor\solution"
+$Lab17Solution = Join-Path $PSScriptRoot "lab17-debug-tdd-sca\solution"
 $VenvScripts = Join-Path $RepoRoot ".venv\Scripts"
 $VenvPy = Join-Path $VenvScripts "python.exe"
 
@@ -63,9 +65,13 @@ Copy-Item $Source $Destination -Recurse
 Get-ChildItem $Destination -Recurse -Directory -Include "__pycache__", ".pytest_cache", ".ruff_cache" | Remove-Item -Recurse -Force
 
 $message = "KaveriClaims 2.0 starting point"
-if ($FromLab15) {
-    Copy-Item (Join-Path $Lab15Solution "*") $Destination -Recurse -Force
-    $message = "KaveriClaims after Lab 15 (reference solution)"
+if ($FromLab16 -or $FromLab17) {
+    Copy-Item (Join-Path $Lab16Solution "*") $Destination -Recurse -Force
+    $message = "KaveriClaims after Lab 16 (reference solution)"
+}
+if ($FromLab17) {
+    Copy-Item (Join-Path $Lab17Solution "*") $Destination -Recurse -Force
+    $message = "KaveriClaims after Lab 17 (reference solution)"
 }
 
 # Node.js: the one on the PATH, or the per-user copy setup-windows.ps1 installs (a VS Code opened before setup can't see that one yet)
@@ -98,7 +104,7 @@ $launch = @'
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Lab 16: team for E10 and E11",
+            "name": "Lab 17: team for E10 and E11",
             "type": "debugpy",
             "request": "launch",
             "module": "kavericlaims",
@@ -131,9 +137,9 @@ if (-not (Test-Path $VenvPy)) {
     Write-Host "Warning: $VenvPy not found. Run setup\setup-windows.ps1 first." -ForegroundColor Yellow
 }
 if ($NodeDir) {
-    Write-Host "Node.js for Lab 15 Task 6: $NodeDir (on the PATH of every terminal in the new window)"
+    Write-Host "Node.js for Lab 16 Task 6: $NodeDir (on the PATH of every terminal in the new window)"
 } else {
-    Write-Host "Warning: Node.js not found. Lab 15 Task 6 needs it. Run setup\setup-windows.ps1 (it installs Node.js), then run this script again with -Reset." -ForegroundColor Yellow
+    Write-Host "Warning: Node.js not found. Lab 16 Task 6 needs it. Run setup\setup-windows.ps1 (it installs Node.js), then run this script again with -Reset." -ForegroundColor Yellow
 }
 
 Write-Host "`nKaveriClaims 2.0 copied to $Destination" -ForegroundColor Green

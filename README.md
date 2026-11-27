@@ -73,7 +73,8 @@ agentic-ai-copilot-labs/
 │   │   └── Modules/
 │   │       ├── lab00-ILT-setup.md
 │   │       ├── lab01-create-agents.md
-│   │       └── lab02-manage-topics.md
+│   │       ├── lab02-manage-topics.md
+│   │       └── lab03-knowledge.md
 │   └── media/
 │
 ├── day1/
@@ -99,25 +100,24 @@ agentic-ai-copilot-labs/
 │   ├── lab10-analyze-document-code/
 │   ├── lab11-voice-agent/
 │   └── lab12-agent-mode/
-│
 ├── day5/
-│   ├── start-kavericlaims.ps1      <-- copies KaveriClaims to Desktop\kavericlaims (Labs 13, 14)
-│   ├── kavericlaims/               <-- KaveriClaims expense-claims app (starting point, don't edit here)
+│   ├── start-kavericlaims.ps1  <- copies the KaveriClaims app to Desktop\kavericlaims (Labs 13-15)
+│   ├── kavericlaims/           <- the KaveriClaims expense-claims app (starting point, don't edit here)
 │   ├── lab13-context-multimodal/
 │   └── lab14-unit-tests/
 │
 ├── day6/
-│   ├── start-kavericlaims-day6.ps1 <-- copies KaveriClaims 2.0 to Desktop\kavericlaims-day6 (Labs 15, 16)
-│   ├── kavericlaims/               <-- KaveriClaims 2.0 (starting point, don't edit here)
-│   ├── lab15-consolidate-refactor/
-│   └── lab16-debug-tdd-sca/
-│
-└── day7/
-    ├── start-kaverirooms.ps1       <-- copies KaveriRooms (JavaScript) to Desktop\kaverirooms (Lab 19)
-    ├── start-kaveriassets.ps1      <-- copies KaveriAssets (Python) to Desktop\kaveriassets (Labs 20-21)
-    ├── kaverirooms/                <-- meeting-room booking: Node.js, no packages (starting point)
-    ├── kaveriassets/               <-- IT asset register (starting point, don't edit here)
-    ├── lab19-spec-kit/              
+│   ├── start-kavericlaims-day6.ps1  <- copies KaveriClaims 2.0 to Desktop\kavericlaims-day6 (Labs 16-18)
+│   ├── kavericlaims/                <- KaveriClaims 2.0 (starting point, don't edit here)
+│   ├── lab16-consolidate-refactor/
+│   ├── lab17-debug-tdd-sca/
+│   └── lab18-issues-security-review/
+└── day7/                      
+    ├── start-kaverirooms.ps1   <- copies the KaveriRooms app (JavaScript) to Desktop\kaverirooms (Lab 19)
+    ├── start-kaveriassets.ps1  <- copies the KaveriAssets app (Python) to Desktop\kaveriassets (Labs 20-21)
+    ├── kaverirooms/            <- meeting-room booking: Node.js, no packages (starting point, don't edit here)
+    ├── kaveriassets/           <- the IT asset register (starting point, don't edit here)
+    ├── lab19-spec-kit/
     ├── lab20-add-features/
     └── lab21-ai-agent/
 ```
