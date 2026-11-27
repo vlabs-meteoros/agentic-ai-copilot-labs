@@ -5,6 +5,7 @@ All labs run on the provided **Windows VM in VS Code**.
 
 | Day | Topic | Labs |
 |---|---|---|
+| **Copilot Studio** | ILT Setup, Agent Creation, Topic Management, Knowledge Integration | [README.md](copilot-studio-labs/Resources/Modules/README.md) |
 | **1** | AI Fundamentals, Neural Networks, Pre-trained Models | [Day 1 labs](day1/README.md) (start with [Lab 0](day1/lab00-environment-setup/README.md)) |
 | **2** | Tools and Ecosystems for LLM Agents, HF Transformers, GenAI Fundamentals | [Day 2 labs](day2/README.md) (start with *Before you start*) |
 | **3** | GitHub Copilot, Prompting Fundamentals and Patterns, MCP | [Day 3 labs](day3/README.md) (start with *Before you start*) |
@@ -57,14 +58,25 @@ If activation is blocked, run `Set-ExecutionPolicy -Scope Process Bypass` in tha
 
 ```
 agentic-ai-copilot-labs/
-├── README.md               <- you are here
+├── README.md                       <-- you are here
 ├── requirements.txt
-├── .env.example            <- copied to .env by setup (holds your keys and passwords - never commit .env)
+├── .env.example                    <-- copied to .env by setup (never commit .env)
+│
 ├── setup/
-│   ├── setup-windows.ps1   <- one-time VM setup
-│   ├── verify_env.py       <- environment check (--azure: Azure resource, --neo4j: your AuraDB instance)
-│   ├── prefetch_assets.py  <- pre-download models and datasets
+│   ├── setup-windows.ps1           <-- one-time VM setup
+│   ├── verify_env.py               <-- environment check (--azure, --neo4j)
+│   ├── prefetch_assets.py          <-- pre-download models and datasets
 │   └── requirements-tested.txt
+│
+├── copilot-studio-labs/
+│   ├── Resources/
+│   │   └── Modules/
+│   │       ├── lab00-ILT-setup.md
+│   │       ├── lab01-create-agents.md
+│   │       ├── lab02-manage-topics.md
+│   │       └── lab03-knowledge.md
+│   └── media/
+│
 ├── day1/
 │   ├── lab00-environment-setup/
 │   ├── lab01-azure-ai-services/
@@ -76,31 +88,32 @@ agentic-ai-copilot-labs/
 │   ├── lab05-llm-usage/
 │   ├── lab06-prompt-variations/
 ├── day3/
-│   ├── lab07-copilot-in-vscode/ 
+│   ├── lab07-copilot-in-vscode/
 │   ├── lab08-prompting-patterns/
 │   └── lab09-mcp-server/
 ├── day4/
 │   ├── start-kaveridesk.ps1    <- copies the KaveriDesk app to Desktop\kaveridesk (Labs 10 and 12)
 │   ├── kaveridesk/             <- the KaveriDesk helpdesk app (starting point, don't edit here)
 │   ├── lab10-analyze-document-code/
-│   ├── lab11-voice-agent/ 
-│   └── lab12-agent-mode/ 
+│   ├── lab11-voice-agent/
+│   └── lab12-agent-mode/
 ├── day5/
-│   ├── start-kavericlaims.ps1  <- copies the KaveriClaims app to Desktop\kavericlaims (Labs 13 and 14)
+│   ├── start-kavericlaims.ps1  <- copies the KaveriClaims app to Desktop\kavericlaims (Labs 13-15)
 │   ├── kavericlaims/           <- the KaveriClaims expense-claims app (starting point, don't edit here)
 │   ├── lab13-context-multimodal/
 │   └── lab14-unit-tests/
 ├── day6/
-│   ├── start-kavericlaims-day6.ps1  <- copies KaveriClaims 2.0 to Desktop\kavericlaims-day6 (Labs 15 and 16)
+│   ├── start-kavericlaims-day6.ps1  <- copies KaveriClaims 2.0 to Desktop\kavericlaims-day6 (Labs 16-18)
 │   ├── kavericlaims/                <- KaveriClaims 2.0 (starting point, don't edit here)
-│   ├── lab15-consolidate-refactor/
-│   └── lab16-debug-tdd-sca/
-├── day7/
-│   ├── start-kaverirooms.ps1   <- copies the KaveriRooms app (JavaScript) to Desktop\kaverirooms (Lab 19)
-│   ├── start-kaveriassets.ps1  <- copies the KaveriAssets app (Python) to Desktop\kaveriassets (Labs 20-21)
-│   ├── kaverirooms/            <- meeting-room booking: Node.js, no packages (starting point, don't edit here)
-│   ├── kaveriassets/           <- the IT asset register (starting point, don't edit here)
-│   ├── lab19-spec-kit/
-│   ├── lab20-add-features/
-│   └── lab21-ai-agent/
+│   ├── lab16-consolidate-refactor/
+│   ├── lab17-debug-tdd-sca/
+│   └── lab18-issues-security-review/
+└── day7/                      
+    ├── start-kaverirooms.ps1   <- copies the KaveriRooms app (JavaScript) to Desktop\kaverirooms (Lab 19)
+    ├── start-kaveriassets.ps1  <- copies the KaveriAssets app (Python) to Desktop\kaveriassets (Labs 20-21)
+    ├── kaverirooms/            <- meeting-room booking: Node.js, no packages (starting point, don't edit here)
+    ├── kaveriassets/           <- the IT asset register (starting point, don't edit here)
+    ├── lab19-spec-kit/
+    ├── lab20-add-features/
+    └── lab21-ai-agent/
 ```

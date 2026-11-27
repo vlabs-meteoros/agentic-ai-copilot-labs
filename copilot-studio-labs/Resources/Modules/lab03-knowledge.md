@@ -72,7 +72,7 @@ In this exercise, you will create a Dataverse table that will be used as a knowl
 
    ![Dataverse Tables in the Maker portal.](../../media/dataverse-tables.png)
 
-1. Select the **Get started with Copilot** tile.
+1. Select the **Get started with Copilot** tile, then select **Create**. Wait for 1–2 minutes while your developer environment is being set up.
 
 1. **In the Get started with Copilot dialog**, select the **Horizontal Sliders Icon ☷**, and then select **One table**. After selecting **One table**, click anywhere outside the dialog to return to the **Tables** page. 
 
@@ -169,7 +169,7 @@ In this exercise, you will add knowledge sources to the agent to ground the agen
 
 1. Select **Add**.
 
-1. For *Name*, enter `Travel, Gift, and Car Expenses | Internal Revenue Service`.
+1. For *Name*, enter `Travel, Gift, and Car Expenses`.
 
 1. For *Description*, enter `This knowledge source contains information on reimbursement of travel expenses.`
 
@@ -185,7 +185,7 @@ In this exercise, you will add knowledge sources to the agent to ground the agen
 
 1. Select **Dataverse**.
 
-1. Search for and select the *Expenses* table you created in Exercise 2
+1. Search for the **Expenses Claim** table you created in *Exercise 2* using the search bar.
 
    ![Screenshot of adding the Expenses table in Dataverse as knowledge to your agent in Copilot Studio.](../../media/knowledge-add-dataverse.png)
 
@@ -205,7 +205,7 @@ In this exercise, you will add knowledge sources to the agent to ground the agen
 
 1. Select the **Synonyms** tab.
 
-1. Scroll down to find the **Expense Type** row, select **+ Add synonyms**.
+1. Hover over **Created By** under **Column name**. Now you can scroll down to find the **Expense Type** row and select **+ Add synonyms**.
 
 1. Enter `Expense label` and select **Add**.
 
@@ -293,7 +293,7 @@ In this exercise, you will configure the generative AI settings and test how the
 
 2. Verify that **Orchestration** is set to **Yes - Responses will be dynamic, using available tools and knowledge as appropriate**.
 
-3. In the **Knowledge** section, set **Allow ungrounded responses** to **Off**.
+3. Scroll down to find the **Knowledge** section, there set **Allow ungrounded responses** to **Off**.
 
 4. Set **Use information from the Web** to **Off**.
 
@@ -335,7 +335,7 @@ Start a new test session and enter:
 According to the IRS, what is the standard deduction for incidental expenses?
 ```
 
-You will get a response indicating that the requested information **could not be determined from the available sources**, because **Use information from the Web** is turned **Off**.
+You will get a response similar to **could not be determined from the available sources**, because **Use information from the Web** is turned **Off**.
 
 ### Task 4.2 – Configure generative answers node
 
@@ -409,13 +409,19 @@ You will get a response indicating that the requested information **could not be
 
    `What is the federal per diem rate?`
 
-1. The knowledge sources may not provide a direct answer. In such cases, the agent may use generative answers to search the web and provide a response. If no suitable grounded or generative response is available, the conversation may route to the Fallback topic.**The information may vary from person to person, so the results shown in the image below may be different for you**.
-
-   ![Screenshot of the conversation using the Fallback topic.](../../media/knowledge-conversation-5.png)
+1. The knowledge sources may not provide a direct answer. In such cases, the agent may use generative answers to search the web and provide a response. If no suitable grounded or generative response is available, the conversation may route to the Fallback topic.**The information may vary from person to person** .
 
 ## Exercise 5 - Publish the agent
 
 1. On the agent page, select **Publish** and select **Publish** again to confirm.
+
+1. Select **Settings** next to Publish.
+   
+1. Click **Security** then click **Authentication**.
+   
+1. Ensure **No authentication** is selected. If it is not selected, select it. Then click **Save** and click **Save** again to confirm.
+
+1. Select the **X** icon below the profile icon to close the Settings panel.
 
 1. Select the **Channels** tab.
 
@@ -444,6 +450,16 @@ You will get a response indicating that the requested information **could not be
    The response should reference information from the configured knowledge sources and may include citations or source references.
    
 1. Try a few more questions and view the responses from your agent. It will have limited functionality, but should be able to provide relevant answers to questions about expense claims and policies.
+
+Use an **IMPORTANT** callout instead:
+
+> [!IMPORTANT]
+> If you see the message **"You may not have access to this agent due to authentication settings. Please contact the owner to use this demo."**, follow these steps:
+>
+> 1. Ensure **No authentication** is selected in the Authentication settings.
+> 2. Close the Settings panel.
+> 3. Select **Publish**, then select **Publish** again to confirm.
+> 4. Open the **Demo website** and test your agent. It should now work correctly.
 
 ## Summary
 
