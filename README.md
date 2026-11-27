@@ -72,9 +72,7 @@ agentic-ai-copilot-labs/
 │   ├── Resources/
 │   │   └── Modules/
 │   │       ├── lab00-ILT-setup.md
-│   │       ├── lab01-create-agents.md
-│   │       ├── lab02-manage-topics.md
-│   │       └── lab03-knowledge.md
+│   │       └── lab01-create-agents.md
 │   └── media/
 │
 ├── day1/
