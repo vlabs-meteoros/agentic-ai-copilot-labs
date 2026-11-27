@@ -10,6 +10,9 @@
 > Based on the Microsoft Learn exercise *Resolve GitHub issues using GitHub Copilot*
 > ([MicrosoftLearning/mslearn-github-copilot-dev](https://github.com/MicrosoftLearning/mslearn-github-copilot-dev), MIT licence), rewritten for the KaveriClaims app.
 
+> [!IMPORTANT]
+> This lab is optional. Feel free to explore it whenever you have some free time. You can skip it if your schedule is tight.
+
 ## Objectives
 
 * Scan code with a **security** static analysis tool (bandit) and triage its findings: real, false positive, or accepted with a reason

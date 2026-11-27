@@ -3,6 +3,9 @@
 Today **KaveriClaims 2.0** gets the treatment a real codebase needs before it grows: duplicate logic merged, a large function split, the policy rules
 translated to JavaScript, bugs hunted with the debugger, a feature built test first, and security holes found, fixed and reviewed.
 
+> [!IMPORTANT]
+> **Lab 18 – Resolve Issues, Fix Security Vulnerabilities, and Review Code** (`lab18-issues-security-review/README.md`) is an optional lab. Feel free to explore them whenever you have some free time. You can skip them if your schedule is tight.
+
 ## Before you start (10 min, do this first)
 
 In a VS Code terminal at the repository root:

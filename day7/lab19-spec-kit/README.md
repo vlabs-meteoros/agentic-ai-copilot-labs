@@ -7,6 +7,9 @@
 | **You need** | Day 7 setup done (*Before you start* in the [Day 7 README](../README.md)), Copilot signed in, Node.js (`node --version` shows v18 or later) |
 | **Files** | Your own copy of **KaveriRooms** in `Desktop\kaverirooms` (Task 1 creates it). `docs\FR-12-recurring-bookings.md` in your copy; `acceptance\` and `solution\` in this folder |
 
+> [!IMPORTANT]
+> This lab is optional. Feel free to explore it whenever you have some free time. You can skip it if your schedule is tight.
+
 ## Objectives
 
 * Ask Copilot Chat **coding questions about JavaScript** in a real project, and check the answers against the code

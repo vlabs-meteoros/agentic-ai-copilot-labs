@@ -7,6 +7,9 @@
 | **You need** | Day 7 setup done, Copilot signed in |
 | **Files** | Your own copy of **KaveriAssets** in `Desktop\kaveriassets` (Task 1 creates it). `backlog\KA-101...`, `KA-102...` and `KA-103...` in your copy; `solution\` in this folder |
 
+> [!IMPORTANT]
+> This lab is optional. Feel free to explore it whenever you have some free time. You can skip it if your schedule is tight.
+
 ## Objectives
 
 * Ask Copilot Chat **Python questions** about a codebase you didn't write, and check the answers in the code
