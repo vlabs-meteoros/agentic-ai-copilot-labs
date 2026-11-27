@@ -4,7 +4,7 @@ Today you add features to two existing apps, in two languages, three ways: a **s
 three backlog tickets in Python with **inline chat, Ask and Agent mode**, and finally an **AI agent** built into the Python app.
 
 > [!IMPORTANT]
-> **[Implement a Product Feature with GitHub Spec Kit (JavaScript)](lab19-spec-kit/README.md)** and **[Add New Features to an Existing Python App](lab20-add-features/README.md)** are optional. Feel free to explore them whenever you have some free time. You can skip them if your schedule is tight.
+> **[lab19-spec-kit/README.md](lab19-spec-kit)** and **[lab20-add-features/README.md](lab20-add-features)** are optional. Feel free to explore them whenever you have some free time. You can skip them if your schedule is tight.
 
 ## Before you start (10 min, do this first)
 
