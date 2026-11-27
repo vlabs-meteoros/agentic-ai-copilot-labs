@@ -5,6 +5,7 @@ All labs run on the provided **Windows VM in VS Code**.
 
 | Day | Topic | Labs |
 |---|---|---|
+| **Copilot Studio** | ILT Setup, Agent Creation, Topic Management, Knowledge Integration | [README.md](copilot-studio-labs/Resources/Modules/README.md) |
 | **1** | AI Fundamentals, Neural Networks, Pre-trained Models | [Day 1 labs](day1/README.md) (start with [Lab 0](day1/lab00-environment-setup/README.md)) |
 | **2** | Tools and Ecosystems for LLM Agents, HF Transformers, GenAI Fundamentals | [Day 2 labs](day2/README.md) (start with *Before you start*) |
 | **3** | GitHub Copilot, Prompting Fundamentals and Patterns, MCP | [Day 3 labs](day3/README.md) (start with *Before you start*) |
