@@ -28,11 +28,19 @@ is set up to find it. (To use `node` in the labs window too, close VS Code compl
 
 | # | Lab | Topic it supports | Time | Needs |
 |---|---|---|---|---|
+| 19 | [Implement a Product Feature with GitHub Spec Kit (JavaScript)](lab19-spec-kit/README.md) | Using GitHub Copilot with JavaScript | 70 min | Copilot, Node.js, Spec Kit |
+| 20 | [Add New Features to an Existing Python App](lab20-add-features/README.md) | Using GitHub Copilot with Python | 50 min | Copilot |
 | 21 | [Integrate an AI Agent into the App](lab21-ai-agent/README.md) | GitHub Copilot Agents | 55 min | Copilot, Azure values in `.env` |
 
 ## How the labs connect
 
 ```
+Lab 19  KaveriRooms (Node.js, no packages): Copilot Chat questions about the JavaScript, then GitHub Spec Kit:
+          |     constitution -> specify -> clarify -> plan -> tasks -> implement, checked by an acceptance test
+          |                                    (your own copy in Desktop\kaverirooms, opened in a second VS Code window)
+Lab 20  KaveriAssets (Python): Copilot Chat questions about the Python, then three backlog tickets:
+          |     small (inline chat), medium (Ask, then Agent), large (Plan, then Agent)
+          |                                    (your own copy in Desktop\kaveriassets, a third window)
 Lab 21  Agents: watch an agent loop step by step, then build an AI assistant INTO KaveriAssets with Agent mode,
                 against a test contract with a fake model. Human approval for changes; a record that tries to give the agent orders
 ```
@@ -40,7 +48,9 @@ Lab 21  Agents: watch an agent loop step by step, then build an AI assistant INT
 Labs 20 and 21 use the same KaveriAssets copy. If a copy gets into a mess:
 
 ```powershell
-powershell -ExecutionPolicy Bypass -File .\day7\start-kaveriassets.ps1 -Reset    # to start Lab 21
+powershell -ExecutionPolicy Bypass -File .\day7\start-kaverirooms.ps1 -Reset                # a fresh KaveriRooms (Lab 19)
+powershell -ExecutionPolicy Bypass -File .\day7\start-kaveriassets.ps1 -Reset               # a fresh KaveriAssets (before Lab 20)
+powershell -ExecutionPolicy Bypass -File .\day7\start-kaveriassets.ps1 -Reset -FromLab20    # the Lab 20 solution (to start Lab 21)
 ```
 
 Run these from the labs repository window, after closing the app's window (**File > Close Window**): Windows can't move a folder that VS Code has open.

@@ -1,10 +1,10 @@
-# Lab 16: Debugging, TDD and BDD, and Static Analysis with GitHub Copilot
+# Lab 17: Debugging, TDD and BDD, and Static Analysis with GitHub Copilot
 
 | | |
 |---|---|
 | **Duration** | 60 minutes |
 | **Topic** | Debugging: using Copilot to identify and resolve common errors, TDD and BDD with Copilot (tests from requirements), resolving static code analysis (SCA) violations with Copilot |
-| **You need** | Your `Desktop\kavericlaims-day6` window from Lab 16 (or a fresh one: `start-kavericlaims-day6.ps1 -Reset -FromLab15`) |
+| **You need** | Your `Desktop\kavericlaims-day6` window from Lab 16 (or a fresh one: `start-kavericlaims-day6.ps1 -Reset -FromLab16`) |
 | **Files** | `kavericlaims\team.py`, `specs\duplicates.md` and `ruff.toml` in your copy; `duplicates.feature` and `solution\` in this folder |
 
 ## Objectives
@@ -150,7 +150,7 @@ November prints `No possible duplicates in 2026-11`.
 
    ```powershell
    New-Item -ItemType Directory -Force tests\features | Out-Null
-   Copy-Item "$HOME\Desktop\agentic-ai-copilot-labs\day6\lab16-debug-tdd-sca\duplicates.feature" tests\features\
+   Copy-Item "$HOME\Desktop\agentic-ai-copilot-labs\day6\lab17-debug-tdd-sca\duplicates.feature" tests\features\
    ```
 
 2. **New Chat**, **Agent** mode:
@@ -213,8 +213,8 @@ After step 3, `ruff check . --exclude kavericlaims/archive.py` prints **All chec
 > **Fix, or suppress with a reason?** A suppression (`# noqa: C901 - ...`) is a decision that a person made and wrote down. Splitting `cli.main` into
 > one function per command would be the better fix. If you have time left, ask Agent mode to do it (Lab 16, Task 5 shows how), and remove the `noqa`.
 
-> Stuck? Compare with `day6\lab16-debug-tdd-sca\solution\` in the labs repository. To start Lab 18 from it: close the KaveriClaims window, then run
-> `.\day6\start-kavericlaims-day6.ps1 -Reset -FromLab16` from the labs window.
+> Stuck? Compare with `day6\lab17-debug-tdd-sca\solution\` in the labs repository. To start Lab 18 from it: close the KaveriClaims window, then run
+> `.\day6\start-kavericlaims-day6.ps1 -Reset -FromLab17` from the labs window.
 
 ---
 
@@ -225,3 +225,5 @@ After step 3, `ruff check . --exclude kavericlaims/archive.py` prints **All chec
 * **TDD**: tests from the spec first (red), the smallest code that passes (green), then clean up (refactor). The tests stop Copilot from "improving" the rules.
 * **BDD**: Gherkin scenarios are requirements that run. Copilot writes the step definitions; anyone can add scenarios.
 * **Static analysis** finds whole classes of bugs before anyone runs the code. Fix most findings; suppress only with a written reason.
+
+Next: **[Lab 18: Resolve Issues, Fix Security Vulnerabilities, and Review Code](../lab18-issues-security-review/README.md)**.
